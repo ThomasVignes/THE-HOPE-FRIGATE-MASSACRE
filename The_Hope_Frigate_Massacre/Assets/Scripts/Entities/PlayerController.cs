@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour
    
     [Header("Camera Values")]
     [SerializeField] private float MouseSensitivity;
-    [SerializeField] private float CamLerpRate;
     [SerializeField] float CamXAngle;
     [SerializeField] float CamYAngle;
     [SerializeField] private float ResetDelay;
@@ -26,7 +25,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Rigidbody rb;
     [SerializeField] private ConfigurableJoint hipJoint;
     [SerializeField] private Animator animator;
-    [SerializeField] private Transform main;
+    [SerializeField] private Transform camForward, camRight;
 
     float XInput, ZInput, MouseX, MouseY;
     private bool running;
@@ -52,6 +51,11 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         MovementManagement();
+    }
+
+    private void LateUpdate()
+    {
+        CamMovement();
     }
 
     public void Hit()
@@ -110,6 +114,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void CamMovement()
+    {
+        CamYAngle -= MouseY;
+        CamYAngle = Mathf.Clamp(CamYAngle, -35f, 20f);
+        CamXAngle += MouseX;
+
+        camRight.localRotation = Quaternion.Euler(CamYAngle, 0f, 0f);
+        camForward.transform.localRotation = Quaternion.Euler(0f, CamXAngle, 0f);
+    }
+
     private void NoPhysicsRotation()
     {
         if (Dir.magnitude > 0.1f)
@@ -124,7 +138,7 @@ public class PlayerController : MonoBehaviour
 
     private void InitializeMoveDir()
     {
-        forward = main.forward;
+        forward = camForward.forward;
         forward.y = 0;
         forward = Vector3.Normalize(forward);
         right = Quaternion.Euler(new Vector3(0, 90, 0)) * forward;

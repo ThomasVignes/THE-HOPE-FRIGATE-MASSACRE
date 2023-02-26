@@ -2467,8 +2467,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 0
-  MouseSensitivity: 0
-  CamLerpRate: 0
+  MouseSensitivity: 300
   CamXAngle: 0
   CamYAngle: 0
   ResetDelay: 0
@@ -2479,7 +2478,8 @@ MonoBehaviour:
   rb: {fileID: 4436805662826666086}
   hipJoint: {fileID: 4436805662826666085}
   animator: {fileID: 688997913}
-  main: {fileID: 1886831889}
+  camForward: {fileID: 1886831889}
+  camRight: {fileID: 1326255525}
 --- !u!4 &511054687 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8282630242565133847, guid: 00f00ca298d2e9947930c6d3824ba0ab, type: 3}
@@ -4270,6 +4270,7 @@ GameObject:
   - component: {fileID: 908847959}
   - component: {fileID: 908847962}
   - component: {fileID: 908847960}
+  - component: {fileID: 908847963}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -4304,7 +4305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa7155796051b734daa718462081dc5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BindingMode: 4
+  m_BindingMode: 3
   m_FollowOffset: {x: 0.39222488, y: 0.536481, z: -1.08}
   m_XDamping: 1
   m_YDamping: 1
@@ -4326,6 +4327,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &908847963
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908847958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4c41ac9245b87c4192012080077d830, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Damping: 0.05
 --- !u!1001 &918743784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5401,7 +5415,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 70
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -5670,6 +5684,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f989a22075fc10e439c9c8d4e0049b6b, type: 3}
   m_PrefabInstance: {fileID: 1304719863}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1326255524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1326255525}
+  m_Layer: 0
+  m_Name: CamRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1326255525
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326255524}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1886831889}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1333866284
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8270,6 +8315,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1886831889}
+  - component: {fileID: 1886831890}
   m_Layer: 0
   m_Name: Main
   m_TagString: Untagged
@@ -8285,13 +8331,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1886831888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.109882474, y: 6.540814, z: 2.03875}
+  m_LocalPosition: {x: 0, y: 0.9215188, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1326255525}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1886831890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886831888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f32c7e8d96af5f438172da354cec7c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pelvis: {fileID: 4071879165333705952}
 --- !u!1001 &1910598158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8393,10 +8453,10 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 4436805662826666084}
-  m_Follow: {fileID: 4436805662826666084}
+  m_LookAt: {fileID: 1326255525}
+  m_Follow: {fileID: 1326255525}
   m_Lens:
-    FieldOfView: 70
+    FieldOfView: 60
     OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
@@ -9495,7 +9555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SetTo: 0
-  Weight: 1
+  Weight: 0.7
   AdditionalDamping: 110
   Mass: 1
   LimitVelocity: 1

@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: Hierarchy
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 350}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 350}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 300}
   m_MaxSize: {x: 32384, y: 24288}
   vertical: 0
-  controlID: 11398
+  controlID: 7451
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 300}
   m_MaxSize: {x: 8096, y: 24288}
   vertical: 1
-  controlID: 11468
+  controlID: 7574
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -343,7 +343,7 @@ MonoBehaviour:
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
-  m_EnterPlayModeBehavior: 0
+  m_EnterPlayModeBehavior: 1
   m_UseMipMap: 0
   m_VSyncEnabled: 0
   m_Gizmos: 0
@@ -622,9 +622,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 2.3950005, z: 0}
+    m_Target: {x: 0, y: 0.9215188, z: 0}
     speed: 2
-    m_Value: {x: 0, y: 2.3950005, z: 0}
+    m_Value: {x: 0, y: 0.9215188, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -673,11 +673,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.16080226, y: 0.09906617, z: -0.01612299, w: -0.9819466}
     speed: 2
-    m_Value: {x: -0.16079016, y: 0.09905872, z: -0.016121777, w: -0.98187274}
+    m_Value: {x: -0.16080226, y: 0.09906617, z: -0.016122991, w: -0.9819466}
   m_Size:
-    m_Target: 29.478573
+    m_Target: 0.8660254
     speed: 2
-    m_Value: 29.478573
+    m_Value: 0.8660254
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -842,9 +842,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: ba600000
-      m_LastClickedID: 24762
-      m_ExpandedIDs: eafaffffd05f00009c600000
+      m_SelectedIDs: 78620000
+      m_LastClickedID: 25208
+      m_ExpandedIDs: eafaffff2e6000000c620000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -958,14 +958,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\Dependencies\Documents\_UnityProjects\The_Hope_Frigate_Massacre\The_Hope_Frigate_Massacre
+  m_LastProjectPath: D:\Dependencies\Documents\_UnityProjects\THE-HOPE-FRIGATE-MASSACRE\The_Hope_Frigate_Massacre
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 02650000
-    m_LastClickedID: 25858
-    m_ExpandedIDs: 000000000265000000ca9a3b
+    m_SelectedIDs: 8a660000
+    m_LastClickedID: 26250
+    m_ExpandedIDs: 000000008a66000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -993,7 +993,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000265000000ca9a3b
+    m_ExpandedIDs: 000000008a66000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
