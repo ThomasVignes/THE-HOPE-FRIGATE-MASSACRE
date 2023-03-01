@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Active: 0
-  Simulated: 0
+  Simulated: 1
   AdditionalDamping: 1
   JointWeight: 0
   AdditionalDamper: 0
@@ -184,7 +184,7 @@ MonoBehaviour:
   MaxVelocity: 0
   MaxAngularVelocity: 0
   ProjectionEnabled: 0
-  CanBeCut: 1
+  CanBeCut: 0
   Monitor: 0
   targetLimb: {fileID: 0}
   ragdollManager: {fileID: 0}
@@ -365,7 +365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Active: 0
-  Simulated: 0
+  Simulated: 1
   AdditionalDamping: 1
   JointWeight: 0
   AdditionalDamper: 0
@@ -375,7 +375,7 @@ MonoBehaviour:
   MaxVelocity: 0
   MaxAngularVelocity: 0
   ProjectionEnabled: 0
-  CanBeCut: 1
+  CanBeCut: 0
   Monitor: 0
   targetLimb: {fileID: 0}
   ragdollManager: {fileID: 0}
@@ -555,7 +555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Active: 0
-  Simulated: 0
+  Simulated: 1
   AdditionalDamping: 1
   JointWeight: 0
   AdditionalDamper: 0
@@ -565,7 +565,7 @@ MonoBehaviour:
   MaxVelocity: 0
   MaxAngularVelocity: 0
   ProjectionEnabled: 0
-  CanBeCut: 1
+  CanBeCut: 0
   Monitor: 0
   targetLimb: {fileID: 0}
   ragdollManager: {fileID: 0}
@@ -746,7 +746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Active: 0
-  Simulated: 0
+  Simulated: 1
   AdditionalDamping: 1
   JointWeight: 0
   AdditionalDamper: 0
@@ -756,7 +756,7 @@ MonoBehaviour:
   MaxVelocity: 0
   MaxAngularVelocity: 0
   ProjectionEnabled: 0
-  CanBeCut: 1
+  CanBeCut: 0
   Monitor: 0
   targetLimb: {fileID: 0}
   ragdollManager: {fileID: 0}

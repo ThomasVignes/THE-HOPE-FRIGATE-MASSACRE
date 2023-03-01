@@ -168,7 +168,7 @@ public class JointHierarchy : EditorWindow
             limb.GetComponent<ConfigurableJoint>().connectedBody = connected.GetComponent<Rigidbody>();
 
         if (refLimb != null)
-            limb.GetComponent<CopyLimb>().TargetLimb = refLimb.transform;
+            limb.GetComponent<RagdollLimb>().TargetLimb = refLimb.transform;
     }
 }
 

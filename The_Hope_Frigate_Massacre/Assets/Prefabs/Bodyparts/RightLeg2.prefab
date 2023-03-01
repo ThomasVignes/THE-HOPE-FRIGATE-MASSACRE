@@ -76,8 +76,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.15798466, y: 0.1273515, z: 0.35610512}
-  m_Center: {x: 0.010133379, y: -0.06784975, z: 0.09255072}
+  m_Size: {x: 0.15798466, y: 0.1273515, z: 0.38115963}
+  m_Center: {x: 0.010133384, y: -0.06784973, z: 0.10507799}
 --- !u!1 &440470142176802143
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,12 +170,12 @@ ConfigurableJoint:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 526781161691168124}
-  m_ConnectedBody: {fileID: 4384570415034367534}
+  m_ConnectedBody: {fileID: 0}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.06601833, y: 1.0098196, z: 0.016658008}
+  m_ConnectedAnchor: {x: -0.05268087, y: 0.039025567, z: 0.03568028}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -236,12 +236,12 @@ ConfigurableJoint:
   m_AngularXDrive:
     serializedVersion: 3
     positionSpring: 7000
-    positionDamper: 2
+    positionDamper: 10
     maximumForce: 3.4028233e+38
   m_AngularYZDrive:
     serializedVersion: 3
     positionSpring: 7000
-    positionDamper: 2
+    positionDamper: 10
     maximumForce: 3.4028233e+38
   m_SlerpDrive:
     serializedVersion: 3
@@ -311,7 +311,7 @@ ConstantForce:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 526781161691168124}
   m_Enabled: 1
-  m_Force: {x: 0, y: 200, z: 0}
+  m_Force: {x: 0, y: 500, z: 0}
   m_RelativeForce: {x: 0, y: 0, z: 0}
   m_Torque: {x: 0, y: 0, z: 0}
   m_RelativeTorque: {x: 0, y: 0, z: 0}
@@ -767,12 +767,12 @@ ConfigurableJoint:
   m_AngularXDrive:
     serializedVersion: 3
     positionSpring: 7000
-    positionDamper: 2
+    positionDamper: 10
     maximumForce: 3.4028233e+38
   m_AngularYZDrive:
     serializedVersion: 3
     positionSpring: 7000
-    positionDamper: 2
+    positionDamper: 10
     maximumForce: 3.4028233e+38
   m_SlerpDrive:
     serializedVersion: 3
@@ -828,7 +828,7 @@ ConstantForce:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3848340727258945040}
   m_Enabled: 1
-  m_Force: {x: 0, y: -200, z: 0}
+  m_Force: {x: 0, y: -500, z: 0}
   m_RelativeForce: {x: 0, y: 0, z: 0}
   m_Torque: {x: 0, y: 0, z: 0}
   m_RelativeTorque: {x: 0, y: 0, z: 0}
@@ -1071,12 +1071,12 @@ ConfigurableJoint:
   m_AngularXDrive:
     serializedVersion: 3
     positionSpring: 7000
-    positionDamper: 2
+    positionDamper: 10
     maximumForce: 3.4028233e+38
   m_AngularYZDrive:
     serializedVersion: 3
     positionSpring: 7000
-    positionDamper: 2
+    positionDamper: 10
     maximumForce: 3.4028233e+38
   m_SlerpDrive:
     serializedVersion: 3

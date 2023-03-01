@@ -55,7 +55,7 @@ public class SlowMoEffector  : MonoBehaviour
     }
 
 
-    public void PunchHit(Rigidbody rb, float force, Vector3 dir)
+    public void Hit(Rigidbody rb, float force, Vector3 dir)
     {
         if (!hitRbs.Contains(rb))
             hitRbs.Add(rb);

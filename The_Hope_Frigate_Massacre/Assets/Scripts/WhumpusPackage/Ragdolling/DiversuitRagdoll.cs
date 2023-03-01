@@ -18,7 +18,7 @@ public class DiversuitRagdoll : MonoBehaviour
     [SerializeField] private LayerMask BaseLayer, NoColLayer;
 
     [Header("References")]
-    [SerializeField] private List<CopyLimb> limbs = new List<CopyLimb>();
+    [SerializeField] private List<RagdollLimb> limbs = new List<RagdollLimb>();
     [SerializeField] private List<ConstantForce> forces = new List<ConstantForce>();
     [SerializeField] private GameObject root;
     public Rigidbody mainRb;
@@ -34,7 +34,7 @@ public class DiversuitRagdoll : MonoBehaviour
     private void Start()
     {
         mainRb = root.GetComponent<Rigidbody>();
-        CopyLimb[] l = transform.GetComponentsInChildren<CopyLimb>();
+        RagdollLimb[] l = transform.GetComponentsInChildren<RagdollLimb>();
         foreach (var e in l)
         {
             //e.gameObject.layer = WhumpusUtilities.ToLayer(BaseLayer);
@@ -142,7 +142,7 @@ public class DiversuitRagdoll : MonoBehaviour
             if (resetVelocity)
                 limb.rb.velocity = Vector3.zero;
 
-            SlowMoEffector.Instance.PunchHit(limb.rb, force.magnitude, force.normalized);
+            SlowMoEffector.Instance.Hit(limb.rb, force.magnitude, force.normalized);
         }
     }
 

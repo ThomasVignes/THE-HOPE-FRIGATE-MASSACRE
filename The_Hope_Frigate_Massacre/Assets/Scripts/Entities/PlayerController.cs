@@ -6,11 +6,14 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Cheats")]
+    public bool instaCut;
+
     [Header("Player Values")]
     [SerializeField] private float maniability;
     [SerializeField] private float rotationSpeed, walkMultiplier, runMultiplier;
-    [SerializeField] private float shootCooldown;
-    public LayerMask whatIsGround;
+    [SerializeField] private float aimAssist, shotKnockback, limbEjection, shootCooldown;
+    public LayerMask whatIsGround, whatAreEnemies;
    
     [Header("Camera Values")]
     [SerializeField] private float MouseSensitivity;
@@ -135,6 +138,34 @@ public class PlayerController : MonoBehaviour
         if (shootTimer == 0)
         {
             //Shoot
+            Vector3 rayOrigin = new Vector3(0.5f, 0.5f, 0f); // center of the screen
+            float rayLength = 500f;
+
+            Ray ray = Camera.main.ViewportPointToRay(rayOrigin);
+            Debug.DrawRay(ray.origin, ray.direction * rayLength, Color.red);
+            RaycastHit hit;
+            if (Physics.SphereCast(ray, aimAssist, out hit, rayLength, whatAreEnemies))
+            {
+                RagdollLimb limb = hit.collider.gameObject.GetComponent<RagdollLimb>();
+
+                if (limb != null)
+                {
+                    //limb.ragdollManager.AddForce(shotKnockback * ray.direction.normalized, true);
+                    
+
+                    if (instaCut)
+                    {
+                        limb.CutLimb();
+                        SlowMoEffector.Instance.Hit(limb.rb, limbEjection/4, ray.direction.normalized);
+                    }
+                    else
+                    {
+                        SlowMoEffector.Instance.Hit(limb.rb, limbEjection, ray.direction.normalized);
+                    }
+                }
+            }
+
+            //Effects
             lhand.AddForce(Vector3.up * 400);
             rhand.AddForce(Vector3.up * 400);
 
@@ -145,7 +176,7 @@ public class PlayerController : MonoBehaviour
     private void CamMovement()
     {
         CamYAngle -= MouseY;
-        CamYAngle = Mathf.Clamp(CamYAngle, -35f, 20f);
+        CamYAngle = Mathf.Clamp(CamYAngle, -55f, 30f);
         CamXAngle += MouseX;
 
         camRight.localRotation = Quaternion.Euler(CamYAngle, 0f, 0f);

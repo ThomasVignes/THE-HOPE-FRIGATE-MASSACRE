@@ -193,7 +193,7 @@ public class AdvancedRagdoll : EditorWindow
         {
             if (limb != null)
             {
-                limb.AddComponent<CopyLimb>();
+                limb.AddComponent<RagdollLimb>();
                 limb.AddComponent<Rigidbody>();
                 ConfigurableJoint joint = limb.AddComponent<ConfigurableJoint>();
 
@@ -274,7 +274,7 @@ public class AdvancedRagdoll : EditorWindow
             limb.GetComponent<ConfigurableJoint>().connectedBody = connected.GetComponent<Rigidbody>();
 
         if (refLimb != null)
-            limb.GetComponent<CopyLimb>().TargetLimb = refLimb.transform;
+            limb.GetComponent<RagdollLimb>().TargetLimb = refLimb.transform;
     }
 }
 

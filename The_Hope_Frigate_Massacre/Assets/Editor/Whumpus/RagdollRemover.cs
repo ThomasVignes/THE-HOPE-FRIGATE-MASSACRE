@@ -36,7 +36,7 @@ public class RagdollRemover : EditorWindow
     private void RemoveRagdoll()
     {
         int limbsint, jointsint, forcesint, rigidbodiesint;
-        CopyLimb[] copyLimbs = Parent.transform.GetComponentsInChildren<CopyLimb>();
+        RagdollLimb[] copyLimbs = Parent.transform.GetComponentsInChildren<RagdollLimb>();
         ConfigurableJoint[] joints = Parent.transform.GetComponentsInChildren<ConfigurableJoint>();
         ConstantForce[] constantForces = Parent.transform.GetComponentsInChildren<ConstantForce>();
         Rigidbody[] rigidbodies = Parent.transform.GetComponentsInChildren<Rigidbody>();
