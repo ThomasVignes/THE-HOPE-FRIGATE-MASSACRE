@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [Header("Player Values")]
     [SerializeField] private float maniability;
     [SerializeField] private float rotationSpeed, walkMultiplier, runMultiplier;
+    [SerializeField] private float shootCooldown;
     public LayerMask whatIsGround;
    
     [Header("Camera Values")]
@@ -22,12 +23,14 @@ public class PlayerController : MonoBehaviour
     [Header("Player References")]
     [SerializeField] private DiversuitRagdoll playerRagdoll;
     [SerializeField] private Transform pelvis;
-    [SerializeField] private Rigidbody rb;
+    [SerializeField] private Rigidbody rb, lhand, rhand;
     [SerializeField] private ConfigurableJoint hipJoint;
     [SerializeField] private Animator animator;
     [SerializeField] private Transform camForward, camRight;
+    [SerializeField] private GameObject aimCursor;
 
     float XInput, ZInput, MouseX, MouseY;
+    private float shootTimer;
     private bool running;
     Vector3 forward, right, Dir;
 
@@ -46,6 +49,11 @@ public class PlayerController : MonoBehaviour
         Inputs();
 
         NoPhysicsRotation();
+
+        if (shootTimer > 0)
+            shootTimer -= Time.deltaTime;
+        else if (shootTimer < 0)
+            shootTimer = 0;
     }
 
     private void FixedUpdate()
@@ -78,7 +86,7 @@ public class PlayerController : MonoBehaviour
 
         float multiplier = walkMultiplier;
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(1))
         {
             if (running)
                 running = false;
@@ -87,6 +95,11 @@ public class PlayerController : MonoBehaviour
 
             animator.SetBool("Walk", Mathf.Abs(ZInput)> 0.1f);
             animator.SetFloat("WalkMultiplier", ZInput * multiplier);
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                Shoot();
+            }
         }
         else
         {
@@ -106,11 +119,26 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("WalkMultiplier", 1 * multiplier);
         }
 
-        animator.SetBool("Aim", Input.GetMouseButton(0));
+        animator.SetBool("Aim", Input.GetMouseButton(1));
+
+        if (aimCursor.activeSelf != Input.GetMouseButton(1))
+            aimCursor.SetActive(Input.GetMouseButton(1));
 
         if (Dir.magnitude < 0.3f)
         {
             running = false;
+        }
+    }
+
+    private void Shoot()
+    {
+        if (shootTimer == 0)
+        {
+            //Shoot
+            lhand.AddForce(Vector3.up * 400);
+            rhand.AddForce(Vector3.up * 400);
+
+            shootTimer = shootCooldown;
         }
     }
 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CopyLimb : MonoBehaviour
 {
+    public bool Active = true;
     public bool Simulated = true;
     public bool AdditionalDamping = true;
     public float JointWeight, AdditionalDamper, Mass;
@@ -37,7 +38,8 @@ public class CopyLimb : MonoBehaviour
         m_ConfigurableJoint = this.GetComponent<ConfigurableJoint>();
         rb = this.GetComponent<Rigidbody>();
 
-        targetInitialRotation = this.targetLimb.transform.localRotation;
+        if (targetLimb != null)
+            targetInitialRotation = this.targetLimb.transform.localRotation;
 
         if (Simulated)
         {
@@ -56,7 +58,7 @@ public class CopyLimb : MonoBehaviour
 
             connectedRb = m_ConfigurableJoint.connectedBody;
         }
-        else
+        else if (Active)
         {
             if (m_ConfigurableJoint != null)
                 Destroy(m_ConfigurableJoint);
@@ -69,7 +71,7 @@ public class CopyLimb : MonoBehaviour
 
     private void Update()
     {
-        if (!Simulated)
+        if (!Simulated && Active)
         {
             transform.localRotation = targetLimb.transform.localRotation;
         }
@@ -77,7 +79,7 @@ public class CopyLimb : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (m_ConfigurableJoint != null && Simulated)
+        if (m_ConfigurableJoint != null && Simulated && Active)
         {
             m_ConfigurableJoint.targetRotation = CopyRotation();
 
