@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Player Values")]
     [SerializeField] private float maniability;
+    [SerializeField] private float additionnalSpeed;
     [SerializeField] private float rotationSpeed, walkMultiplier, runMultiplier;
     [SerializeField] private float aimAssist, shotKnockback, limbEjection, shootCooldown;
     public LayerMask whatIsGround, whatAreEnemies;
@@ -117,6 +118,7 @@ public class PlayerController : MonoBehaviour
             }
 
             Dir = Vector3.Normalize(forward * ZInput + right * XInput);
+            rb.AddForce(additionnalSpeed * Dir);
 
             animator.SetBool("Walk", Dir.magnitude > 0.1f);
             animator.SetFloat("WalkMultiplier", 1 * multiplier);

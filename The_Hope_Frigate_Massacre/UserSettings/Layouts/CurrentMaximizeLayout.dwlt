@@ -61,16 +61,20 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1280, y: 960}
+  m_TargetSize: {x: 1280, y: 1024}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
-  m_EnterPlayModeBehavior: 1
+  m_EnterPlayModeBehavior: 0
   m_UseMipMap: 0
   m_VSyncEnabled: 0
   m_Gizmos: 0
   m_Stats: 0
+<<<<<<< HEAD
   m_SelectedSizes: 07000000000000000000000000000000000000000000000000000000000000000000000000000000
+=======
+  m_SelectedSizes: 08000000000000000000000000000000000000000000000000000000000000000000000000000000
+>>>>>>> master
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
@@ -78,8 +82,8 @@ MonoBehaviour:
     vZoomLockedByDefault: 0
     m_HBaseRangeMin: -640
     m_HBaseRangeMax: 640
-    m_VBaseRangeMin: -480
-    m_VBaseRangeMax: 480
+    m_VBaseRangeMin: -512
+    m_VBaseRangeMax: 512
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -98,15 +102,22 @@ MonoBehaviour:
       x: 0
       y: 21
       width: 752
+<<<<<<< HEAD
       height: 464
     m_Scale: {x: 0.48333335, y: 0.48333332}
     m_Translation: {x: 376, y: 232}
+=======
+      height: 58
+    m_Scale: {x: 0.056640625, y: 0.056640625}
+    m_Translation: {x: 376, y: 29}
+>>>>>>> master
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
       x: -777.931
       y: -480
       width: 1555.862
@@ -114,6 +125,15 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 0.48333332
   m_LastWindowPixelSize: {x: 752, y: 485}
+=======
+      x: -6638.3447
+      y: -512
+      width: 13276.689
+      height: 1024
+    m_MinimalGUI: 1
+  m_defaultScale: 0.056640625
+  m_LastWindowPixelSize: {x: 752, y: 79}
+>>>>>>> master
   m_ClearInEditMode: 1
   m_NoCameraWarning: 0
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -397,9 +417,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: -6.052837, y: 1.2734528, z: 9.6767645}
     speed: 2
     m_Value: {x: -6.052837, y: 1.2734528, z: 9.6767645}
+=======
+    m_Target: {x: -3.4539306, y: 0.6391237, z: 10.628856}
+    speed: 2
+    m_Value: {x: -3.4539306, y: 0.6391237, z: 10.628856}
+>>>>>>> master
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -433,7 +459,11 @@ MonoBehaviour:
         m_Value: 1
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
       m_Size: {x: 1, y: 1}
+=======
+      m_Size: {x: 2, y: 2}
+>>>>>>> master
     zGrid:
       m_Fade:
         m_Target: 0
@@ -446,6 +476,7 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
+<<<<<<< HEAD
     m_Target: {x: -0.07933283, y: 0.33565512, z: -0.028259054, w: -0.9383031}
     speed: 2
     m_Value: {x: -0.079326116, y: 0.33562672, z: -0.028256662, w: -0.9382237}
@@ -453,6 +484,15 @@ MonoBehaviour:
     m_Target: 1.440186
     speed: 2
     m_Value: 1.440186
+=======
+    m_Target: {x: 0.026332574, y: -0.21461707, z: 0.005967555, w: 0.97647935}
+    speed: 2
+    m_Value: {x: -0.026332574, y: 0.21461707, z: -0.005967555, w: -0.97647935}
+  m_Size:
+    m_Target: 3.0850494
+    speed: 2
+    m_Value: 3.0850494
+>>>>>>> master
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -500,7 +540,7 @@ MonoBehaviour:
     x: 0
     y: 73
     width: 752
-    height: 498
+    height: 726
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -549,11 +589,11 @@ MonoBehaviour:
     - e00: 0.689997
       e01: 0
       e02: 0
-      e03: -125.909
+      e03: -125.90903
       e10: 0
       e11: 0.689997
       e12: 0
-      e13: 293.0091
+      e13: 293.00906
       e20: 0
       e21: 0
       e22: 1
@@ -763,9 +803,15 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: 6c6bfeffeeb0ffffceb7ffffdab7ffffe6b7fffff4b7fffffab7ffffe4baffff28bbffff98c9ffff9cc9ffff48d0ffff54d0ffff60d0ffff6cd0ffff78d0ffff84d0ffff90d0ffff9ed0ffffa4d0ffffb2d0ffffeafaffffe88e0000248f0000689000002491000094910000
+=======
+      m_SelectedIDs: 76bcffff
+      m_LastClickedID: -17290
+      m_ExpandedIDs: 4e9bffff629bffff069cffff56a1ffff70bcffff76bcffff2ed5ffffeefaffffca890000228a0000
+>>>>>>> master
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -923,22 +969,38 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
     - Assets/Scenes
+=======
+    - Assets/Prefabs/Bodyparts
+>>>>>>> master
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
+<<<<<<< HEAD
   - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Dependencies\Documents\_UnityProjects\THE-HOPE-FRIGATE-MASSACRE\The_Hope_Frigate_Massacre
+=======
+  - Assets/Prefabs/Bodyparts
+  m_LastFoldersGridSize: -1
+  m_LastProjectPath: C:\Users\tvignes\Documents\Projects\THE-HOPE-FRIGATE-MASSACRE\The_Hope_Frigate_Massacre
+>>>>>>> master
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 608e0000
     m_LastClickedID: 36448
     m_ExpandedIDs: 00000000168e00005a8e000000ca9a3b
+=======
+    m_SelectedIDs: a4870000
+    m_LastClickedID: 34724
+    m_ExpandedIDs: 000000004a8700009c87000000ca9a3b
+>>>>>>> master
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -966,7 +1028,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000168e000000ca9a3b
+=======
+    m_ExpandedIDs: 000000004a87000000ca9a3b
+>>>>>>> master
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -991,9 +1057,15 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
+<<<<<<< HEAD
     m_SelectedInstanceIDs: 748e0000
     m_LastClickedInstanceID: 36468
     m_HadKeyboardFocusLastEvent: 1
+=======
+    m_SelectedInstanceIDs: 76bcffff
+    m_LastClickedInstanceID: -17290
+    m_HadKeyboardFocusLastEvent: 0
+>>>>>>> master
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
