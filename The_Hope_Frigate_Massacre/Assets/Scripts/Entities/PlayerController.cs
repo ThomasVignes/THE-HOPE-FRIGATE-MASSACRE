@@ -4,6 +4,13 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
+[System.Serializable]
+public class OverrideAction
+{
+    public string Name;
+    public float Duration;
+}
+
 public class PlayerController : MonoBehaviour
 {
     [Header("Cheats")]
@@ -15,6 +22,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float rotationSpeed, walkMultiplier, runMultiplier;
     [SerializeField] private float aimAssist, shotKnockback, limbEjection, shootCooldown;
     public LayerMask whatIsGround, whatAreEnemies;
+    [SerializeField] private List<OverrideAction> overrideActions = new List<OverrideAction>();
    
     [Header("Camera Values")]
     [SerializeField] private float MouseSensitivity;
@@ -34,8 +42,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject aimCursor;
 
     float XInput, ZInput, MouseX, MouseY;
-    private float shootTimer;
-    private bool running;
+    private float shootTimer, overrideTimer;
+    private bool running, overrideAction;
     Vector3 forward, right, Dir;
 
     public DiversuitRagdoll PlayerRagdoll { get { return playerRagdoll; } }
@@ -90,38 +98,58 @@ public class PlayerController : MonoBehaviour
 
         float multiplier = walkMultiplier;
 
-        if (Input.GetMouseButton(1))
+        if (overrideAction)
         {
-            if (running)
-                running = false;
-
             Dir = Vector3.Normalize(forward);
 
-            animator.SetBool("Walk", Mathf.Abs(ZInput)> 0.1f);
-            animator.SetFloat("WalkMultiplier", ZInput * multiplier);
+            overrideTimer -= Time.deltaTime;
 
-            if (Input.GetMouseButtonDown(0))
+            if (overrideTimer <= 0)
             {
-                Shoot();
+                overrideTimer = 0;
+                overrideAction = false;
             }
         }
         else
-        {
-            if (Input.GetKey(KeyCode.LeftShift) && ! running)
+        { 
+            if (Input.GetKeyDown(KeyCode.F))
             {
-                running = true;
+                PlayOverrideAction("Punch");
             }
 
-            if (running)
+            if (Input.GetMouseButton(1))
             {
-                multiplier = runMultiplier;
+                if (running)
+                    running = false;
+
+                Dir = Vector3.Normalize(forward);
+
+                animator.SetBool("Walk", Mathf.Abs(ZInput)> 0.1f);
+                animator.SetFloat("WalkMultiplier", ZInput * multiplier);
+
+                if (Input.GetMouseButtonDown(0))
+                {
+                    Shoot();
+                }
             }
+            else
+            {
+                if (Input.GetKey(KeyCode.LeftShift) && ! running)
+                {
+                    running = true;
+                }
 
-            Dir = Vector3.Normalize(forward * ZInput + right * XInput);
-            rb.AddForce(additionnalSpeed * Dir);
+                if (running)
+                {
+                    multiplier = runMultiplier;
+                }
 
-            animator.SetBool("Walk", Dir.magnitude > 0.1f);
-            animator.SetFloat("WalkMultiplier", 1 * multiplier);
+                Dir = Vector3.Normalize(forward * ZInput + right * XInput);
+                rb.AddForce(additionnalSpeed * Dir);
+
+                animator.SetBool("Walk", Dir.magnitude > 0.1f);
+                animator.SetFloat("WalkMultiplier", 1 * multiplier);
+            }
         }
 
         animator.SetBool("Aim", Input.GetMouseButton(1));
@@ -194,6 +222,19 @@ public class PlayerController : MonoBehaviour
             Quaternion targetQuaternion = Quaternion.Euler(pelvis.transform.rotation.eulerAngles.x, -targetAngle + 90f, pelvis.transform.rotation.eulerAngles.z);
 
             pelvis.transform.rotation = Quaternion.RotateTowards(pelvis.transform.rotation, targetQuaternion, rotationSpeed * Time.deltaTime);
+        }
+    }
+
+    public void PlayOverrideAction(string name)
+    {
+        foreach (var action in overrideActions)
+        {
+            if (action.Name == name)
+            {
+                overrideTimer = action.Duration;
+                animator.SetTrigger(action.Name);
+                overrideAction = true;
+            }
         }
     }
 
