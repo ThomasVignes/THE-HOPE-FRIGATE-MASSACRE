@@ -12,6 +12,7 @@ public class GenericEnemy : MonoBehaviour
     [SerializeField] State state;
     [SerializeField] private Animator leftFootAnimator, rightFootAnimator;
     [SerializeField] private List<Animator> hands = new List<Animator>();
+    [SerializeField] private List<Animator> heads = new List<Animator>();
 
     private void Update()
     {
@@ -25,5 +26,22 @@ public class GenericEnemy : MonoBehaviour
             leftFootAnimator.SetInteger("MoveType", 1);
             rightFootAnimator.SetInteger("MoveType", 2);
         }
+    }
+
+    [ContextMenu("Scream")]
+    public void Scream()
+    {
+        foreach (var item in hands)
+        {
+            item.SetTrigger("Scream");
+        }
+
+        foreach (var item in heads)
+        {
+            item.SetTrigger("Scream");
+        }
+
+        leftFootAnimator.SetTrigger("Scream");
+        rightFootAnimator.SetTrigger("Scream");
     }
 }
