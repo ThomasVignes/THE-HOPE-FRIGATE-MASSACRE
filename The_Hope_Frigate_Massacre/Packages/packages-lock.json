@@ -184,6 +184,13 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.whumpus.whumpuspackage": {
+      "version": "https://github.com/ThomasVignes/WhumpusPackage.git?path=/Assets/Plugins/Whumpus",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "0881c60387b99b01c05e848db7f5332f31932a59"
+    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,

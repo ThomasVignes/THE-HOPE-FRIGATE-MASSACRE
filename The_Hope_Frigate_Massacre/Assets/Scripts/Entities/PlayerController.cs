@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using Whumpus;
 
 [System.Serializable]
 public class OverrideAction
@@ -34,6 +35,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Player References")]
     [SerializeField] private DiversuitRagdoll playerRagdoll;
+    [SerializeField] private RagdollLimb rArmJoint;
     [SerializeField] private Transform pelvis;
     [SerializeField] private Rigidbody rb, lhand, rhand;
     [SerializeField] private ConfigurableJoint hipJoint;
@@ -45,7 +47,7 @@ public class PlayerController : MonoBehaviour
 
     float XInput, ZInput, MouseX, MouseY;
     private float shootTimer, overrideTimer;
-    private bool running, overrideAction;
+    private bool running, overrideAction, inAction, rArmCut;
     Vector3 forward, right, Dir;
 
     public DiversuitRagdoll PlayerRagdoll { get { return playerRagdoll; } }
@@ -115,10 +117,13 @@ public class PlayerController : MonoBehaviour
             }
         }
         else
-        { 
+        {
+            if (Input.GetKeyDown(KeyCode.F11))
+                Death();
+
             if (Input.GetKeyDown(KeyCode.F))
             {
-                PlayOverrideAction("Punch");
+                RarmAction();
             }
 
             if (Input.GetKeyDown(KeyCode.E))
@@ -161,6 +166,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        animator.SetBool("Block", Input.GetKey(KeyCode.Space));
         animator.SetBool("Aim", Input.GetMouseButton(1));
 
         if (aimCursor.activeSelf != Input.GetMouseButton(1))
@@ -170,6 +176,46 @@ public class PlayerController : MonoBehaviour
         {
             running = false;
         }
+    }
+
+    private void Death()
+    {
+        var rb = pelvis.GetComponent<Rigidbody>();
+        rb.constraints = RigidbodyConstraints.None;
+        rb.AddRelativeForce(Vector3.forward * 5000f);
+        animator.SetTrigger("Death");
+        playerRagdoll.ChangeWeight(0.02f);
+        playerRagdoll.EnableForces(false);
+    }
+
+    private void RarmAction()
+    {
+        if (!inAction)
+        {
+            if (!rArmCut)
+            {
+                inAction = true;
+                animator.SetTrigger("ThrowRArm");
+            }
+            else
+            {
+                rArmCut = false;
+                rArmJoint.Reattatch();
+            }
+            animator.SetBool("RarmDetached", rArmCut);
+        }
+    }
+
+    public void DetachArm()
+    {
+        inAction = false;
+
+        rArmCut = true;
+        rArmJoint.CutLimb();
+        var rb = rArmJoint.GetComponent<Rigidbody>();
+        rb.AddForce(Vector3.up * 500);
+        rb.AddForce(forward.normalized * 2000);
+        animator.SetBool("RarmDetached", rArmCut);
     }
 
     private void Shoot()

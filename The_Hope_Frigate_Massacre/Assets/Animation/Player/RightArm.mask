@@ -1,0 +1,149 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: RightArm
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Gideon
+    m_Weight: 0
+  - m_Path: GUn
+    m_Weight: 0
+  - m_Path: root
+    m_Weight: 0
+  - m_Path: root/Bone001
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone002
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone002/Bone031
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)/Bone011(mirrored)(mirrored)
+    m_Weight: 1
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)/Bone011(mirrored)(mirrored)/Bone012(mirrored)(mirrored)
+    m_Weight: 1
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)/Bone011(mirrored)(mirrored)/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)
+    m_Weight: 1
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)/Bone011(mirrored)(mirrored)/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)/Bone011
+    m_Weight: 1
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)/Bone011(mirrored)(mirrored)/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)/Bone011/Bone012
+    m_Weight: 1
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)/Bone011(mirrored)(mirrored)/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)/Bone011/Bone012/Bone013
+    m_Weight: 1
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)/Bone011(mirrored)(mirrored)/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)/Bone011/Bone012/Bone013/nub
+    m_Weight: 1
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)/Bone011(mirrored)(mirrored)/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)/Bone015
+    m_Weight: 1
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)/Bone011(mirrored)(mirrored)/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)/Bone015/Bone016
+    m_Weight: 1
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)/Bone011(mirrored)(mirrored)/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)/Bone015/Bone016/Bone017
+    m_Weight: 1
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)/Bone011(mirrored)(mirrored)/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)/Bone015/Bone016/Bone017/nub
+    m_Weight: 1
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)/Bone011(mirrored)(mirrored)/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)/Bone019
+    m_Weight: 1
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)/Bone011(mirrored)(mirrored)/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)/Bone019/Bone020
+    m_Weight: 1
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)/Bone011(mirrored)(mirrored)/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)/Bone019/Bone020/Bone021
+    m_Weight: 1
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)/Bone011(mirrored)(mirrored)/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)/Bone019/Bone020/Bone021/nub
+    m_Weight: 1
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)/Bone011(mirrored)(mirrored)/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)/Bone023
+    m_Weight: 1
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)/Bone011(mirrored)(mirrored)/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)/Bone023/Bone024
+    m_Weight: 1
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)/Bone011(mirrored)(mirrored)/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)/Bone023/Bone024/Bone025
+    m_Weight: 1
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)/Bone011(mirrored)(mirrored)/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)/Bone023/Bone024/Bone025/nub
+    m_Weight: 1
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)/Bone011(mirrored)(mirrored)/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)/Bone027
+    m_Weight: 1
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)/Bone011(mirrored)(mirrored)/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)/Bone027/Bone028
+    m_Weight: 1
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)/Bone011(mirrored)(mirrored)/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)/Bone027/Bone028/Bone029
+    m_Weight: 1
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)/Bone011(mirrored)(mirrored)/Bone012(mirrored)(mirrored)/Bone013(mirrored)(mirrored)/Bone027/Bone028/Bone029/nub
+    m_Weight: 1
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)(mirrored)
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)(mirrored)/Bone011(mirrored)(mirrored)(mirrored)
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)(mirrored)/Bone011(mirrored)(mirrored)(mirrored)/Bone012(mirrored)(mirrored)(mirrored)
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)(mirrored)/Bone011(mirrored)(mirrored)(mirrored)/Bone012(mirrored)(mirrored)(mirrored)/Bone013(mirrored)(mirrored)(mirrored)
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)(mirrored)/Bone011(mirrored)(mirrored)(mirrored)/Bone012(mirrored)(mirrored)(mirrored)/Bone013(mirrored)(mirrored)(mirrored)/Bone011(mirrored)
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)(mirrored)/Bone011(mirrored)(mirrored)(mirrored)/Bone012(mirrored)(mirrored)(mirrored)/Bone013(mirrored)(mirrored)(mirrored)/Bone011(mirrored)/Bone012(mirrored)
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)(mirrored)/Bone011(mirrored)(mirrored)(mirrored)/Bone012(mirrored)(mirrored)(mirrored)/Bone013(mirrored)(mirrored)(mirrored)/Bone011(mirrored)/Bone012(mirrored)/Bone013(mirrored)
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)(mirrored)/Bone011(mirrored)(mirrored)(mirrored)/Bone012(mirrored)(mirrored)(mirrored)/Bone013(mirrored)(mirrored)(mirrored)/Bone011(mirrored)/Bone012(mirrored)/Bone013(mirrored)/nub
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)(mirrored)/Bone011(mirrored)(mirrored)(mirrored)/Bone012(mirrored)(mirrored)(mirrored)/Bone013(mirrored)(mirrored)(mirrored)/Bone015(mirrored)
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)(mirrored)/Bone011(mirrored)(mirrored)(mirrored)/Bone012(mirrored)(mirrored)(mirrored)/Bone013(mirrored)(mirrored)(mirrored)/Bone015(mirrored)/Bone016(mirrored)
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)(mirrored)/Bone011(mirrored)(mirrored)(mirrored)/Bone012(mirrored)(mirrored)(mirrored)/Bone013(mirrored)(mirrored)(mirrored)/Bone015(mirrored)/Bone016(mirrored)/Bone017(mirrored)
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)(mirrored)/Bone011(mirrored)(mirrored)(mirrored)/Bone012(mirrored)(mirrored)(mirrored)/Bone013(mirrored)(mirrored)(mirrored)/Bone015(mirrored)/Bone016(mirrored)/Bone017(mirrored)/nub
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)(mirrored)/Bone011(mirrored)(mirrored)(mirrored)/Bone012(mirrored)(mirrored)(mirrored)/Bone013(mirrored)(mirrored)(mirrored)/Bone019(mirrored)
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)(mirrored)/Bone011(mirrored)(mirrored)(mirrored)/Bone012(mirrored)(mirrored)(mirrored)/Bone013(mirrored)(mirrored)(mirrored)/Bone019(mirrored)/Bone020(mirrored)
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)(mirrored)/Bone011(mirrored)(mirrored)(mirrored)/Bone012(mirrored)(mirrored)(mirrored)/Bone013(mirrored)(mirrored)(mirrored)/Bone019(mirrored)/Bone020(mirrored)/Bone021(mirrored)
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)(mirrored)/Bone011(mirrored)(mirrored)(mirrored)/Bone012(mirrored)(mirrored)(mirrored)/Bone013(mirrored)(mirrored)(mirrored)/Bone019(mirrored)/Bone020(mirrored)/Bone021(mirrored)/nub
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)(mirrored)/Bone011(mirrored)(mirrored)(mirrored)/Bone012(mirrored)(mirrored)(mirrored)/Bone013(mirrored)(mirrored)(mirrored)/Bone023(mirrored)
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)(mirrored)/Bone011(mirrored)(mirrored)(mirrored)/Bone012(mirrored)(mirrored)(mirrored)/Bone013(mirrored)(mirrored)(mirrored)/Bone023(mirrored)/Bone024(mirrored)
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)(mirrored)/Bone011(mirrored)(mirrored)(mirrored)/Bone012(mirrored)(mirrored)(mirrored)/Bone013(mirrored)(mirrored)(mirrored)/Bone023(mirrored)/Bone024(mirrored)/Bone025(mirrored)
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)(mirrored)/Bone011(mirrored)(mirrored)(mirrored)/Bone012(mirrored)(mirrored)(mirrored)/Bone013(mirrored)(mirrored)(mirrored)/Bone023(mirrored)/Bone024(mirrored)/Bone025(mirrored)/nub
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)(mirrored)/Bone011(mirrored)(mirrored)(mirrored)/Bone012(mirrored)(mirrored)(mirrored)/Bone013(mirrored)(mirrored)(mirrored)/Bone027(mirrored)
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)(mirrored)/Bone011(mirrored)(mirrored)(mirrored)/Bone012(mirrored)(mirrored)(mirrored)/Bone013(mirrored)(mirrored)(mirrored)/Bone027(mirrored)/Bone028(mirrored)
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)(mirrored)/Bone011(mirrored)(mirrored)(mirrored)/Bone012(mirrored)(mirrored)(mirrored)/Bone013(mirrored)(mirrored)(mirrored)/Bone027(mirrored)/Bone028(mirrored)/Bone029(mirrored)
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone014(mirrored)(mirrored)(mirrored)/Bone011(mirrored)(mirrored)(mirrored)/Bone012(mirrored)(mirrored)(mirrored)/Bone013(mirrored)(mirrored)(mirrored)/Bone027(mirrored)/Bone028(mirrored)/Bone029(mirrored)/nub
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone033
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone002/Bone031/Bone032/Bone033/nub
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone006
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone006/Bone007
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone006/Bone007/Bone008
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone006/Bone007/Bone008/Bone009
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone006/Bone007/Bone008/Bone009/nub
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone006(mirrored)
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone006(mirrored)/Bone007(mirrored)
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone006(mirrored)/Bone007(mirrored)/Bone008(mirrored)
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone006(mirrored)/Bone007(mirrored)/Bone008(mirrored)/Bone009(mirrored)
+    m_Weight: 0
+  - m_Path: root/Bone001/Bone006(mirrored)/Bone007(mirrored)/Bone008(mirrored)/Bone009(mirrored)/nub
+    m_Weight: 0
+  - m_Path: Wig
+    m_Weight: 0
