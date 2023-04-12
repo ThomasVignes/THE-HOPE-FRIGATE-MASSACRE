@@ -41,6 +41,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform camForward, camRight;
     [SerializeField] private GameObject aimCursor;
 
+    private GunfireController gunfire;
+
     float XInput, ZInput, MouseX, MouseY;
     private float shootTimer, overrideTimer;
     private bool running, overrideAction;
@@ -52,6 +54,8 @@ public class PlayerController : MonoBehaviour
     {
         playerRagdoll.Hit += () => Hit();
         Cursor.lockState = CursorLockMode.Locked;
+
+        gunfire = GetComponentInChildren<GunfireController>();
     }
 
     void Update()
@@ -115,6 +119,11 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.F))
             {
                 PlayOverrideAction("Punch");
+            }
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                animator.SetBool("Pray", !animator.GetBool("Pray"));
             }
 
             if (Input.GetMouseButton(1))
@@ -198,6 +207,9 @@ public class PlayerController : MonoBehaviour
             //Effects
             lhand.AddForce(Vector3.up * 400);
             rhand.AddForce(Vector3.up * 400);
+
+            gunfire.FireWeapon();
+            AmbianceManager.Instance.StopMusic(3f);
 
             shootTimer = shootCooldown;
         }
