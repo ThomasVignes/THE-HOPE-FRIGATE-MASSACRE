@@ -245,7 +245,7 @@ public class PlayerController : MonoBehaviour
                     }
                     else
                     {
-                        SlowMoEffector.Instance.Hit(limb.rb, limbEjection, ray.direction.normalized);
+                        SlowMoEffector.Instance.Hit(limb.rb, shotKnockback, ray.direction.normalized);
                     }
                 }
             }
