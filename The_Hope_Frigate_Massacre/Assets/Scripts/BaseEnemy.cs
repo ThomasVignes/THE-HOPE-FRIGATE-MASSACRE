@@ -8,6 +8,7 @@ public class BaseEnemy : MonoBehaviour
     [SerializeField] private float AttackRange, AttackCD;
     [SerializeField] private List<Hitbox> hitboxes = new List<Hitbox>();
     [SerializeField] private GameObject pelvis, player;
+    [SerializeField] private DiversuitRagdoll ragdoll;
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private Animator animator;
     Collider[] cols;
@@ -82,6 +83,19 @@ public class BaseEnemy : MonoBehaviour
             cutLimb.rb.constraints = RigidbodyConstraints.FreezeAll;
             cutLimb.transform.localPosition = new Vector3(-0.16f, 0, 0);
         }
+        
+    }
+
+    public void Die()
+    {
+        animator.SetBool("Walking", false);
+        animator.SetBool("Dead", true);
+        var rb = pelvis.GetComponent<Rigidbody>();
+        rb.constraints = RigidbodyConstraints.None;
+        rb.AddRelativeForce(-Vector3.forward * 500f);
+        
+        
+        ragdoll.EnableForces(false);
         
     }
 

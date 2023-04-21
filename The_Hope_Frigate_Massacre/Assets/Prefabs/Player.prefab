@@ -110,19 +110,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 9
   Active: 1
   Simulated: 1
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 4137210607451332045}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -299,19 +300,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 11
   Active: 1
   Simulated: 0
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 4027533782313555619}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -362,19 +364,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 11
   Active: 1
   Simulated: 0
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 958187569687698454}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -425,19 +428,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 11
   Active: 1
   Simulated: 0
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 4073268692632365148}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -616,19 +620,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 11
   Active: 1
   Simulated: 0
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 3327694329927412490}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -679,19 +684,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 11
   Active: 1
   Simulated: 0
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 5896446503673143058}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -742,19 +748,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 11
   Active: 1
   Simulated: 0
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 8995207549613327177}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -805,19 +812,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 11
   Active: 1
   Simulated: 0
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 2097586395817722322}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -868,19 +876,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 11
   Active: 1
   Simulated: 0
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 8074673506413459165}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -931,19 +940,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 11
   Active: 1
   Simulated: 0
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 7423305221755789917}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -994,19 +1004,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 11
   Active: 1
   Simulated: 0
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 946608751180601634}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -1057,19 +1068,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 11
   Active: 1
   Simulated: 0
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 1131114571082415146}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -1124,19 +1136,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 10
   Active: 1
   Simulated: 1
+  CanBeCut: 1
   AdditionalDamping: 0
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 5646625554968026943}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -1314,19 +1327,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 8
   Active: 1
   Simulated: 1
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 647045682415349041}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -1534,19 +1548,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 11
   Active: 1
   Simulated: 0
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 467029419742413486}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -1759,19 +1774,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 4
   Active: 1
   Simulated: 1
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 2126584156674506406}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -1951,19 +1967,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 9
   Active: 1
   Simulated: 1
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 3439353586596798437}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -2140,19 +2157,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 11
   Active: 1
   Simulated: 0
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 2542674631768837609}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -2203,19 +2221,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 11
   Active: 1
   Simulated: 0
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 5177457955117844903}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -2268,19 +2287,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 2
   Active: 1
   Simulated: 1
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 253379612608011493}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -2447,19 +2467,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 3
   Active: 1
   Simulated: 1
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 8221935185502543497}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -2649,19 +2670,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 11
   Active: 1
   Simulated: 0
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 3462768224580249353}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -2715,19 +2737,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 8
   Active: 1
   Simulated: 1
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 8861294574216035253}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -2966,19 +2989,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 11
   Active: 1
   Simulated: 0
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 7097414320660866475}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -3029,19 +3053,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 11
   Active: 1
   Simulated: 0
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 5574654610033445674}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -3127,19 +3152,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 3
   Active: 1
   Simulated: 1
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 4821519681465284424}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -3329,19 +3355,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 11
   Active: 1
   Simulated: 0
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 584042808283337301}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -3392,19 +3419,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 11
   Active: 1
   Simulated: 0
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 594246432234301013}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -3463,19 +3491,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 6
   Active: 1
   Simulated: 1
+  CanBeCut: 1
   AdditionalDamping: 0
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 5640097161528989062}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -3797,19 +3826,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 0
   Active: 1
   Simulated: 1
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 8537626502265470696}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -3985,19 +4015,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 11
   Active: 1
   Simulated: 0
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 1858849613333061449}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -4048,19 +4079,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 11
   Active: 1
   Simulated: 0
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 3583749908300357888}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -4111,19 +4143,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 11
   Active: 1
   Simulated: 0
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 8838605528314992646}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -4234,19 +4267,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 11
   Active: 1
   Simulated: 0
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 6795609204532448104}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -4297,19 +4331,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 11
   Active: 1
   Simulated: 0
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 1753257557986175486}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -4362,19 +4397,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 2
   Active: 1
   Simulated: 1
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 8397209406237049191}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -4850,19 +4886,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 11
   Active: 1
   Simulated: 0
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 5696221192413838745}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -5002,19 +5039,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 6
   Active: 1
   Simulated: 1
+  CanBeCut: 1
   AdditionalDamping: 0
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 2407620367606025482}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -5193,19 +5231,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 6
   Active: 1
   Simulated: 1
+  CanBeCut: 1
   AdditionalDamping: 0
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 8589319757685262384}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -5386,19 +5425,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 10
   Active: 1
   Simulated: 1
+  CanBeCut: 1
   AdditionalDamping: 0
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 2486910679612125424}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -5581,19 +5621,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 5
   Active: 1
   Simulated: 1
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 4329677881897743226}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -5770,19 +5811,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 11
   Active: 1
   Simulated: 0
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 7072371201364904592}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -5864,19 +5906,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 11
   Active: 1
   Simulated: 0
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 6102070622388187373}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -5930,19 +5973,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 4
   Active: 1
   Simulated: 1
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 3956360406110393245}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -6119,19 +6163,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 11
   Active: 1
   Simulated: 0
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 4240173846851019555}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -6275,19 +6320,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 11
   Active: 1
   Simulated: 0
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 1000201750521173636}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -6483,6 +6529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8204232745832354476}
   - component: {fileID: 8204232745832354479}
+  - component: {fileID: 2072476158}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -6497,7 +6544,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8204232745832354477}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 7.329, z: -3.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6526,7 +6573,7 @@ MonoBehaviour:
   walkMultiplier: 1
   runMultiplier: 1.5
   aimAssist: 0.02
-  shotKnockback: 100
+  shotKnockback: 7000
   limbEjection: 3000
   shootCooldown: 0.3
   whatIsGround:
@@ -6555,6 +6602,20 @@ MonoBehaviour:
   camForward: {fileID: 0}
   camRight: {fileID: 0}
   aimCursor: {fileID: 0}
+--- !u!114 &2072476158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8204232745832354477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1e9b993ef546c049b4a940559857180, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typePriority: 030000000800000000000000
+  ragdollManager: {fileID: 9014557080588789189}
 --- !u!1 &8319540147932211682
 GameObject:
   m_ObjectHideFlags: 0
@@ -6638,19 +6699,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 5
   Active: 1
   Simulated: 1
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 7902938503197506971}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -6827,19 +6889,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f896e662cb8f19439396c39076aece4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 11
   Active: 1
   Simulated: 0
+  CanBeCut: 1
   AdditionalDamping: 1
+  ProjectionEnabled: 0
+  Monitor: 0
   JointWeight: 0
   AdditionalDamper: 0
   Mass: 0
-  LimitVelocity: 0
-  LimitAngularVelocity: 0
   MaxVelocity: 0
   MaxAngularVelocity: 0
-  ProjectionEnabled: 0
-  CanBeCut: 1
-  Monitor: 0
+  LimitVelocity: 0
+  LimitAngularVelocity: 0
   targetLimb: {fileID: 5802128808529266185}
   ragdollManager: {fileID: 0}
   m_ConfigurableJoint: {fileID: 0}
@@ -7016,6 +7079,59 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 855b12f41db94774992420839ef46a15, type: 3}
   m_PrefabInstance: {fileID: 8204232744301629197}
   m_PrefabAsset: {fileID: 0}
+--- !u!137 &8204232744301629198
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9014557081037386332}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b8053940f5a44a1468b993b97fc47b26, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 2783131832183395012, guid: 855b12f41db94774992420839ef46a15, type: 3}
+  m_Bones: []
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 0}
+  m_AABB:
+    m_Center: {x: 0, y: -0.79506946, z: -0.6950185}
+    m_Extent: {x: 0.6791676, y: 0.59437966, z: 0.6951948}
+  m_DirtyAABB: 0
 --- !u!183 &8204232744301629199
 Cloth:
   m_ObjectHideFlags: 0
@@ -7912,59 +8028,6 @@ Cloth:
   - {x: 0.6666667, y: 0.16666667, z: 0.16666667}
   - {x: 0.5, y: 0.5, z: 0}
   m_VirtualParticleIndices: 
---- !u!137 &8204232744301629198
-SkinnedMeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9014557081037386332}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: b8053940f5a44a1468b993b97fc47b26, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 2783131832183395012, guid: 855b12f41db94774992420839ef46a15, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0, y: -0.79506946, z: -0.6950185}
-    m_Extent: {x: 0.6791676, y: 0.59437966, z: 0.6951948}
-  m_DirtyAABB: 0
 --- !u!1001 &8204232745003160209
 PrefabInstance:
   m_ObjectHideFlags: 0

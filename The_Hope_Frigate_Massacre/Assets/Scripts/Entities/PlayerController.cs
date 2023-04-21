@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public bool instaCut;
 
     [Header("Player Values")]
+    public bool Praying;
     [SerializeField] private float maniability;
     [SerializeField] private float additionnalSpeed;
     [SerializeField] private float rotationSpeed, walkMultiplier, runMultiplier;
@@ -66,7 +67,10 @@ public class PlayerController : MonoBehaviour
 
         Inputs();
 
-        NoPhysicsRotation();
+        if (!Praying)
+        {
+            NoPhysicsRotation();
+        }
 
         if (shootTimer > 0)
             shootTimer -= Time.deltaTime;
@@ -76,12 +80,18 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        MovementManagement();
+        if (!Praying)
+        {
+            MovementManagement();
+        }
     }
 
     private void LateUpdate()
     {
-        CamMovement();
+        if (!Praying)
+        {
+            CamMovement();
+        }
     }
 
     public void Hit()
@@ -96,11 +106,13 @@ public class PlayerController : MonoBehaviour
 
     private void Inputs()
     {
+        
         ZInput = Input.GetAxis("Vertical");
         XInput = Input.GetAxis("Horizontal");
 
         MouseX = Input.GetAxis("Mouse X") * MouseSensitivity * Time.unscaledDeltaTime;
         MouseY = Input.GetAxis("Mouse Y") * MouseSensitivity * Time.unscaledDeltaTime;
+        
 
         float multiplier = walkMultiplier;
 
@@ -128,7 +140,9 @@ public class PlayerController : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.E))
             {
-                animator.SetBool("Pray", !animator.GetBool("Pray"));
+                Praying = !Praying;
+                
+                animator.SetBool("Pray", Praying);
             }
 
             if (Input.GetMouseButton(1))
@@ -233,21 +247,20 @@ public class PlayerController : MonoBehaviour
             RaycastHit hit;
             if (Physics.SphereCast(ray, aimAssist, out hit, rayLength, whatAreEnemies))
             {
-                RagdollLimb limb = hit.collider.gameObject.GetComponent<RagdollLimb>();
+                TargetLimb target = hit.collider.gameObject.GetComponent<TargetLimb>();
 
-                if (limb != null)
+                if (target != null)
                 {
-                    //limb.ragdollManager.AddForce(shotKnockback * ray.direction.normalized, true);
+                    target.Hit(shotKnockback, ray.direction.normalized);
+                }
                     
+                if (instaCut)
+                {
+                    RagdollLimb limb = hit.collider.gameObject.GetComponent<RagdollLimb>();
 
-                    if (instaCut)
+                    if (limb != null)
                     {
                         limb.CutLimb();
-                        SlowMoEffector.Instance.Hit(limb.rb, limbEjection/4, ray.direction.normalized);
-                    }
-                    else
-                    {
-                        SlowMoEffector.Instance.Hit(limb.rb, shotKnockback, ray.direction.normalized);
                     }
                 }
             }
