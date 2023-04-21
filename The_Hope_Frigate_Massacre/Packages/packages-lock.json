@@ -189,7 +189,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "07bcafb5b6bd668ac35c00b2d2b931d143d4b540"
+      "hash": "b051cfa7795a31d211e65b90f6e02bb99eb5ae9c"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",

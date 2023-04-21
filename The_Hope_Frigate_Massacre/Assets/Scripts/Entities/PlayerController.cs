@@ -129,7 +129,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             if (Input.GetKeyDown(KeyCode.F11))
-                Death();
+                playerRagdoll.Explode();
 
             if (Input.GetKeyDown(KeyCode.F))
             {
@@ -182,7 +182,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            /*
+            
             Collider[] cols = Physics.OverlapSphere(pelvis.transform.position, 1f, playerLayerTemp);
 
             foreach (var item in cols)
@@ -191,10 +191,11 @@ public class PlayerController : MonoBehaviour
 
                 if (limb != null)
                 {
+                    limb.rb.constraints = RigidbodyConstraints.None;
                     limb.Reattatch();
                 }
             }
-            */
+            
         }
 
         animator.SetBool("Aim", Input.GetMouseButton(1));
@@ -267,7 +268,7 @@ public class PlayerController : MonoBehaviour
 
                 if (target != null)
                 {
-                    target.Hit(shotKnockback, ray.direction.normalized);
+                    target.Hit(1, shotKnockback, ray.direction.normalized);
                 }
                     
                 if (instaCut)

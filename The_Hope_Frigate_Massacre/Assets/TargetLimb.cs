@@ -17,11 +17,11 @@ public class TargetLimb : MonoBehaviour
         limb = GetComponent<RagdollLimb>();    
     }
 
-    public void Hit(float force, Vector3 dir)
+    public void Hit(int damage, float force, Vector3 dir)
     {
         if (!HasBeenCut && ! Resistant)
         {
-            HP--;
+            HP -= damage;
 
             if (HP <= 0)
             {
