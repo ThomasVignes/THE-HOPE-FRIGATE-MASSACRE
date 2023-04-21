@@ -15,6 +15,8 @@ public class BaseEnemy : MonoBehaviour
     Collider[] cols;
     private float attackTimer;
 
+    [HideInInspector] public bool Dead;
+
     private void Awake()
     {
         Hitbox[] hbs = GetComponentsInChildren<Hitbox>();
@@ -91,12 +93,22 @@ public class BaseEnemy : MonoBehaviour
     {
         HP--;
 
-        if (HP <= 0)
+        if (HP <= 0 && !Dead)
         {
-            Die();
+            Dead = true;
+            StartCoroutine(DieCoroutine());
         }
     }
 
+    IEnumerator DieCoroutine()
+    {
+        animator.SetBool("Walking", false);
+        ragdoll.ChangeWeight(0.07f);
+
+        yield return new WaitForSeconds(1.3f);
+
+        Die();
+    }
     public void Die()
     {
         animator.SetBool("Walking", false);

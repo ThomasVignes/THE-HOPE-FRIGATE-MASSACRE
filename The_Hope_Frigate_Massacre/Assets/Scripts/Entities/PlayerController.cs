@@ -42,8 +42,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private ConfigurableJoint hipJoint;
     [SerializeField] private Animator animator;
     [SerializeField] private Transform camForward, camRight;
-    [SerializeField] private GameObject aimCursor;
+    [SerializeField] private GameObject aimCursor, gunTip;
 
+    private LineRenderer lr;
     private GunfireController gunfire;
 
     float XInput, ZInput, MouseX, MouseY;
@@ -59,6 +60,7 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
 
         gunfire = GetComponentInChildren<GunfireController>();
+        lr = GetComponent<LineRenderer>();
     }
 
     void Update()
@@ -129,7 +131,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             if (Input.GetKeyDown(KeyCode.F11))
-                playerRagdoll.Explode();
+                Death();
 
             if (Input.GetKeyDown(KeyCode.F))
             {
@@ -262,13 +264,20 @@ public class PlayerController : MonoBehaviour
             Ray ray = Camera.main.ViewportPointToRay(rayOrigin);
             Debug.DrawRay(ray.origin, ray.direction * rayLength, Color.red);
             RaycastHit hit;
+            lr.SetPosition(0, gunTip.transform.position);
+
             if (Physics.SphereCast(ray, aimAssist, out hit, rayLength, whatAreEnemies))
             {
+                lr.SetPosition(1, hit.point);
                 TargetLimb target = hit.collider.gameObject.GetComponent<TargetLimb>();
 
                 if (target != null)
                 {
                     target.Hit(1, shotKnockback, ray.direction.normalized);
+
+                    float scale = Random.Range(0.6f, 1f);
+
+                    BloodManager.Instance.SpawnBlood(hit.point, gunTip.transform.position, target.transform, Vector3.one * scale);
                 }
                     
                 if (instaCut)
@@ -281,8 +290,13 @@ public class PlayerController : MonoBehaviour
                     }
                 }
             }
+            else
+            {
+                lr.SetPosition(1, ray.origin + ray.direction * rayLength);
+            }
 
             //Effects
+            StartCoroutine(ShootLine());
             lhand.AddForce(Vector3.up * 400);
             rhand.AddForce(Vector3.up * 400);
 
@@ -329,6 +343,15 @@ public class PlayerController : MonoBehaviour
                 overrideAction = true;
             }
         }
+    }
+
+    IEnumerator ShootLine()
+    {
+        lr.enabled = true;
+
+        yield return new WaitForSeconds(0.09f);
+
+        lr.enabled = false;
     }
 
     private void InitializeMoveDir()

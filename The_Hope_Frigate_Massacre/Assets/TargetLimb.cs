@@ -27,9 +27,18 @@ public class TargetLimb : MonoBehaviour
             {
                 HasBeenCut = true;
                 OnCut.Invoke();
-                SlowMoEffector.Instance.Hit(limb.rb, force, dir);
+                SlowMoEffector.Instance.Hit(limb.rb, force/4, dir);
+
+                BloodManager.Instance.SpawnBlood(limb.transform.position, limb.transform.parent.position - limb.transform.parent.right * 0.2f, limb.transform.parent);
 
                 limb.CutLimb();
+
+                Blood[] bloods = GetComponentsInChildren<Blood>();
+
+                foreach (var item in bloods)
+                {
+                    Destroy(item.gameObject);
+                }
             }
             else
             {

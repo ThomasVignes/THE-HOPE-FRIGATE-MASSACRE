@@ -7193,7 +7193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91033a224bb41f840a375c406e6eba03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 3
+  HP: 4
   AttackRange: 2.4
   AttackCD: 12
   hitboxes: []
