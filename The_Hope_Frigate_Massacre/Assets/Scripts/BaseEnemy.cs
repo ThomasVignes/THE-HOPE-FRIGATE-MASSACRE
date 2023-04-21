@@ -5,6 +5,7 @@ using Whumpus;
 
 public class BaseEnemy : MonoBehaviour
 {
+    [SerializeField] private int HP;
     [SerializeField] private float AttackRange, AttackCD;
     [SerializeField] private List<Hitbox> hitboxes = new List<Hitbox>();
     [SerializeField] private GameObject pelvis, player;
@@ -86,6 +87,16 @@ public class BaseEnemy : MonoBehaviour
         
     }
 
+    public void Hurt()
+    {
+        HP--;
+
+        if (HP <= 0)
+        {
+            Die();
+        }
+    }
+
     public void Die()
     {
         animator.SetBool("Walking", false);
@@ -93,10 +104,8 @@ public class BaseEnemy : MonoBehaviour
         var rb = pelvis.GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.None;
         rb.AddRelativeForce(-Vector3.forward * 500f);
-        
-        
-        ragdoll.EnableForces(false);
-        
+
+        ragdoll.Explode();
     }
 
     void OnDrawGizmosSelected()

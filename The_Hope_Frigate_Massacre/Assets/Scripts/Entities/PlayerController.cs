@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float additionnalSpeed;
     [SerializeField] private float rotationSpeed, walkMultiplier, runMultiplier;
     [SerializeField] private float aimAssist, shotKnockback, limbEjection, shootCooldown;
-    public LayerMask whatIsGround, whatAreEnemies;
+    public LayerMask playerLayerTemp, whatIsGround, whatAreEnemies;
     [SerializeField] private List<OverrideAction> overrideActions = new List<OverrideAction>();
    
     [Header("Camera Values")]
@@ -67,10 +67,8 @@ public class PlayerController : MonoBehaviour
 
         Inputs();
 
-        if (!Praying)
-        {
-            NoPhysicsRotation();
-        }
+        NoPhysicsRotation();
+
 
         if (shootTimer > 0)
             shootTimer -= Time.deltaTime;
@@ -180,7 +178,25 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        animator.SetBool("Block", Input.GetKey(KeyCode.Space));
+        //animator.SetBool("Block", Input.GetKey(KeyCode.Space));
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            /*
+            Collider[] cols = Physics.OverlapSphere(pelvis.transform.position, 1f, playerLayerTemp);
+
+            foreach (var item in cols)
+            {
+                RagdollLimb limb = item.GetComponent<RagdollLimb>();
+
+                if (limb != null)
+                {
+                    limb.Reattatch();
+                }
+            }
+            */
+        }
+
         animator.SetBool("Aim", Input.GetMouseButton(1));
 
         if (aimCursor.activeSelf != Input.GetMouseButton(1))
@@ -288,6 +304,9 @@ public class PlayerController : MonoBehaviour
 
     private void NoPhysicsRotation()
     {
+        if (Praying)
+            Dir = Vector3.Normalize(forward);
+
         if (Dir.magnitude > 0.1f)
         {
             float targetAngle = Mathf.Atan2(Dir.z, Dir.x) * Mathf.Rad2Deg;
