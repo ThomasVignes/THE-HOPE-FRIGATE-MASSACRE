@@ -29,7 +29,7 @@ public class TargetLimb : MonoBehaviour
                 OnCut.Invoke();
                 SlowMoEffector.Instance.Hit(limb.rb, force/4, dir);
 
-                BloodManager.Instance.SpawnBlood(limb.transform.position, limb.transform.parent.position - limb.transform.parent.right * 0.2f, limb.transform.parent);
+                BloodManager.Instance.SpawnBlood(limb.transform.position, limb.transform.parent.position + Vector3.Normalize(limb.transform.position - limb.transform.parent.position) * 0.2f, limb.transform.parent);
 
                 limb.CutLimb();
 
