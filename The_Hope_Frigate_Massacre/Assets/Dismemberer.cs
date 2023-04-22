@@ -6,6 +6,7 @@ using Whumpus;
 public class Dismemberer : MonoBehaviour
 {
     [SerializeField] private List<LimbType> typePriority = new List<LimbType>();
+    [SerializeField] private List<RagdollLimb> limbsPriority = new List<RagdollLimb>();
     [SerializeField] private DiversuitRagdoll ragdollManager;
 
     public void Dismember()
@@ -27,7 +28,7 @@ public class Dismemberer : MonoBehaviour
                 break;
         }
     }
-    public void Dismember(out RagdollLimb cutLimb)
+    public void DismemberType(out RagdollLimb cutLimb)
     {
         cutLimb = null;
 
@@ -47,6 +48,21 @@ public class Dismemberer : MonoBehaviour
 
             if (hasCut)
                 break;
+        }
+    }
+
+    public void DismemberSpecific(out RagdollLimb cutLimb)
+    {
+        cutLimb = null;
+
+        foreach (var limb in limbsPriority)
+        {
+            if (!limb.IsCut)
+            {
+                limb.CutLimb();
+                cutLimb = limb;
+                break;
+            }
         }
     }
 }

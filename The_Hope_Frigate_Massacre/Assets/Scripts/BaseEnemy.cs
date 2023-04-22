@@ -6,7 +6,7 @@ using Whumpus;
 public class BaseEnemy : MonoBehaviour
 {
     [SerializeField] private int HP;
-    [SerializeField] private float AttackRange, AttackCD;
+    [SerializeField] private float AttackRange, RunRange, AttackCD;
     [SerializeField] private List<Hitbox> hitboxes = new List<Hitbox>();
     [SerializeField] private GameObject pelvis, player;
     [SerializeField] private DiversuitRagdoll ragdoll;
@@ -29,9 +29,25 @@ public class BaseEnemy : MonoBehaviour
 
     private void Update()
     {
+
+        /*
+        bool inRange = Physics.CheckSphere(pelvis.transform.position, AttackRange, playerLayer);
+        if (inRange)
+        {
+            animator.SetTrigger("Grab");
+
+            foreach (var item in hitboxes)
+            {
+                item.Activate(1.3f);
+            }
+
+            attackTimer = AttackCD/3;
+        }
+        */
+
         if (attackTimer == 0)
         {
-            bool inRange = Physics.CheckSphere(pelvis.transform.position, AttackRange, playerLayer);
+            bool inRange = Physics.CheckSphere(pelvis.transform.position, RunRange, playerLayer);
 
             if (inRange)
             {
@@ -69,11 +85,25 @@ public class BaseEnemy : MonoBehaviour
         {
             if (item.LastHitObject != null && !caught)
             {
-                //item.LastHitObject.GetComponent<RagdollLimb>().ragdollManager.transform.parent.GetComponent<Dismemberer>().Dismember(out cutLimb);
-                cutLimb = item.LastHitObject.GetComponent<RagdollLimb>();
-                cutLimb.CutLimb();
-                parent = item.transform;
-                caught = true;
+                RagdollLimb hitLimb = item.LastHitObject.GetComponent<RagdollLimb>();
+                if (hitLimb != null)
+                {
+                    if (!hitLimb.IsCut)
+                    {
+                        if (hitLimb.transform.IsChildOf(hitLimb.ragdollManager.transform))
+                        {
+                            CameraEffectsManager.Instance.ScreenShake();
+                            animator.SetTrigger("Dismember");
+
+                            hitLimb.ragdollManager.transform.parent.GetComponent<Dismemberer>().DismemberSpecific(out cutLimb);
+
+                            //cutLimb = item.LastHitObject.GetComponent<RagdollLimb>();
+                            cutLimb.CutLimb();
+                            parent = item.transform;
+                            caught = true;
+                        }
+                    }
+                }
             }
 
             item.Deactivate();
@@ -96,23 +126,24 @@ public class BaseEnemy : MonoBehaviour
         if (HP <= 0 && !Dead)
         {
             Dead = true;
+            animator.SetBool("Dead", true);
             StartCoroutine(DieCoroutine());
         }
     }
 
     IEnumerator DieCoroutine()
     {
-        animator.SetBool("Walking", false);
         ragdoll.ChangeWeight(0.07f);
 
-        yield return new WaitForSeconds(1.3f);
+        float duration = Random.Range(1.3f, 2.7f);
+
+        yield return new WaitForSeconds(duration);
 
         Die();
     }
     public void Die()
     {
         animator.SetBool("Walking", false);
-        animator.SetBool("Dead", true);
         var rb = pelvis.GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.None;
         rb.AddRelativeForce(-Vector3.forward * 500f);
@@ -124,6 +155,6 @@ public class BaseEnemy : MonoBehaviour
     {
         // Draw a yellow sphere at the transform's position
         Gizmos.color = Color.yellow;
-        Gizmos.DrawSphere(pelvis.transform.position, AttackRange);
+        Gizmos.DrawSphere(pelvis.transform.position, RunRange);
     }
 }

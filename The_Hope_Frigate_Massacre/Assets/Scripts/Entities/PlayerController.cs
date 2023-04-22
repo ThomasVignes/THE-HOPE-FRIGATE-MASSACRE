@@ -278,6 +278,11 @@ public class PlayerController : MonoBehaviour
                     float scale = Random.Range(0.6f, 1f);
 
                     BloodManager.Instance.SpawnBlood(hit.point, gunTip.transform.position, target.transform, Vector3.one * scale);
+                    CameraEffectsManager.Instance.ScreenShake(0.07f);
+                }
+                else
+                {
+                    CameraEffectsManager.Instance.ScreenShake(0.03f);
                 }
                     
                 if (instaCut)
@@ -293,6 +298,7 @@ public class PlayerController : MonoBehaviour
             else
             {
                 lr.SetPosition(1, ray.origin + ray.direction * rayLength);
+                CameraEffectsManager.Instance.ScreenShake(0.03f);
             }
 
             //Effects

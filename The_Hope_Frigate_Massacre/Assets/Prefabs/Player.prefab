@@ -129,6 +129,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!54 &308327974311663377
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -303,7 +304,7 @@ MonoBehaviour:
   Type: 11
   Active: 1
   Simulated: 0
-  CanBeCut: 1
+  CanBeCut: 0
   AdditionalDamping: 1
   ProjectionEnabled: 0
   Monitor: 0
@@ -319,6 +320,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!1 &477871259596867628
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,7 +369,7 @@ MonoBehaviour:
   Type: 11
   Active: 1
   Simulated: 0
-  CanBeCut: 1
+  CanBeCut: 0
   AdditionalDamping: 1
   ProjectionEnabled: 0
   Monitor: 0
@@ -383,6 +385,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!1 &593045872521732407
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,7 +434,7 @@ MonoBehaviour:
   Type: 11
   Active: 1
   Simulated: 0
-  CanBeCut: 1
+  CanBeCut: 0
   AdditionalDamping: 1
   ProjectionEnabled: 0
   Monitor: 0
@@ -447,6 +450,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!1 &622551419921622214
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,7 +627,7 @@ MonoBehaviour:
   Type: 11
   Active: 1
   Simulated: 0
-  CanBeCut: 1
+  CanBeCut: 0
   AdditionalDamping: 1
   ProjectionEnabled: 0
   Monitor: 0
@@ -639,6 +643,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!1 &1105074015431811766
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,7 +692,7 @@ MonoBehaviour:
   Type: 11
   Active: 1
   Simulated: 0
-  CanBeCut: 1
+  CanBeCut: 0
   AdditionalDamping: 1
   ProjectionEnabled: 0
   Monitor: 0
@@ -703,6 +708,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!1 &1159087365196472115
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,7 +757,7 @@ MonoBehaviour:
   Type: 11
   Active: 1
   Simulated: 0
-  CanBeCut: 1
+  CanBeCut: 0
   AdditionalDamping: 1
   ProjectionEnabled: 0
   Monitor: 0
@@ -767,6 +773,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!1 &1266815730782423059
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,7 +822,7 @@ MonoBehaviour:
   Type: 11
   Active: 1
   Simulated: 0
-  CanBeCut: 1
+  CanBeCut: 0
   AdditionalDamping: 1
   ProjectionEnabled: 0
   Monitor: 0
@@ -831,6 +838,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!1 &1293239130454185634
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,7 +887,7 @@ MonoBehaviour:
   Type: 11
   Active: 1
   Simulated: 0
-  CanBeCut: 1
+  CanBeCut: 0
   AdditionalDamping: 1
   ProjectionEnabled: 0
   Monitor: 0
@@ -895,6 +903,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!1 &1510679641493033406
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,7 +952,7 @@ MonoBehaviour:
   Type: 11
   Active: 1
   Simulated: 0
-  CanBeCut: 1
+  CanBeCut: 0
   AdditionalDamping: 1
   ProjectionEnabled: 0
   Monitor: 0
@@ -959,6 +968,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!1 &1602025721595240742
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,7 +1017,7 @@ MonoBehaviour:
   Type: 11
   Active: 1
   Simulated: 0
-  CanBeCut: 1
+  CanBeCut: 0
   AdditionalDamping: 1
   ProjectionEnabled: 0
   Monitor: 0
@@ -1023,6 +1033,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!1 &1802335761867021921
 GameObject:
   m_ObjectHideFlags: 0
@@ -1071,7 +1082,7 @@ MonoBehaviour:
   Type: 11
   Active: 1
   Simulated: 0
-  CanBeCut: 1
+  CanBeCut: 0
   AdditionalDamping: 1
   ProjectionEnabled: 0
   Monitor: 0
@@ -1087,6 +1098,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!1 &1936085626776897083
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,6 +1167,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!54 &1936085626776897085
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1346,6 +1359,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!54 &647045683261742850
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1551,7 +1565,7 @@ MonoBehaviour:
   Type: 11
   Active: 1
   Simulated: 0
-  CanBeCut: 1
+  CanBeCut: 0
   AdditionalDamping: 1
   ProjectionEnabled: 0
   Monitor: 0
@@ -1567,6 +1581,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!1 &2242731649739673836
 GameObject:
   m_ObjectHideFlags: 0
@@ -1793,6 +1808,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!54 &2126584155240893591
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1986,6 +2002,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!54 &3439353585480265174
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2160,7 +2177,7 @@ MonoBehaviour:
   Type: 11
   Active: 1
   Simulated: 0
-  CanBeCut: 1
+  CanBeCut: 0
   AdditionalDamping: 1
   ProjectionEnabled: 0
   Monitor: 0
@@ -2176,6 +2193,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!1 &2620639348238661203
 GameObject:
   m_ObjectHideFlags: 0
@@ -2224,7 +2242,7 @@ MonoBehaviour:
   Type: 11
   Active: 1
   Simulated: 0
-  CanBeCut: 1
+  CanBeCut: 0
   AdditionalDamping: 1
   ProjectionEnabled: 0
   Monitor: 0
@@ -2240,6 +2258,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!1 &2724053811733218653
 GameObject:
   m_ObjectHideFlags: 0
@@ -2306,6 +2325,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!54 &253379611743137513
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2486,6 +2506,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!54 &2750296615906918610
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2673,7 +2694,7 @@ MonoBehaviour:
   Type: 11
   Active: 1
   Simulated: 0
-  CanBeCut: 1
+  CanBeCut: 0
   AdditionalDamping: 1
   ProjectionEnabled: 0
   Monitor: 0
@@ -2689,6 +2710,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!1 &2953094415073120046
 GameObject:
   m_ObjectHideFlags: 0
@@ -2756,6 +2778,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!54 &2953094415073120033
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2992,7 +3015,7 @@ MonoBehaviour:
   Type: 11
   Active: 1
   Simulated: 0
-  CanBeCut: 1
+  CanBeCut: 0
   AdditionalDamping: 1
   ProjectionEnabled: 0
   Monitor: 0
@@ -3008,6 +3031,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!1 &3363126027696744054
 GameObject:
   m_ObjectHideFlags: 0
@@ -3056,7 +3080,7 @@ MonoBehaviour:
   Type: 11
   Active: 1
   Simulated: 0
-  CanBeCut: 1
+  CanBeCut: 0
   AdditionalDamping: 1
   ProjectionEnabled: 0
   Monitor: 0
@@ -3072,6 +3096,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!1 &3476655677769998935
 GameObject:
   m_ObjectHideFlags: 0
@@ -3171,6 +3196,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!54 &3517875633549708500
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3358,7 +3384,7 @@ MonoBehaviour:
   Type: 11
   Active: 1
   Simulated: 0
-  CanBeCut: 1
+  CanBeCut: 0
   AdditionalDamping: 1
   ProjectionEnabled: 0
   Monitor: 0
@@ -3374,6 +3400,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!1 &3805129937888571706
 GameObject:
   m_ObjectHideFlags: 0
@@ -3422,7 +3449,7 @@ MonoBehaviour:
   Type: 11
   Active: 1
   Simulated: 0
-  CanBeCut: 1
+  CanBeCut: 0
   AdditionalDamping: 1
   ProjectionEnabled: 0
   Monitor: 0
@@ -3438,6 +3465,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!1 &3831418537019426809
 GameObject:
   m_ObjectHideFlags: 0
@@ -3510,6 +3538,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!54 &3831418537019426808
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3845,6 +3874,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!54 &4104078028064304131
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4018,7 +4048,7 @@ MonoBehaviour:
   Type: 11
   Active: 1
   Simulated: 0
-  CanBeCut: 1
+  CanBeCut: 0
   AdditionalDamping: 1
   ProjectionEnabled: 0
   Monitor: 0
@@ -4034,6 +4064,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!1 &4241066437655058296
 GameObject:
   m_ObjectHideFlags: 0
@@ -4082,7 +4113,7 @@ MonoBehaviour:
   Type: 11
   Active: 1
   Simulated: 0
-  CanBeCut: 1
+  CanBeCut: 0
   AdditionalDamping: 1
   ProjectionEnabled: 0
   Monitor: 0
@@ -4098,6 +4129,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!1 &4872084860184349211
 GameObject:
   m_ObjectHideFlags: 0
@@ -4146,7 +4178,7 @@ MonoBehaviour:
   Type: 11
   Active: 1
   Simulated: 0
-  CanBeCut: 1
+  CanBeCut: 0
   AdditionalDamping: 1
   ProjectionEnabled: 0
   Monitor: 0
@@ -4162,6 +4194,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!1 &5128638160037168441
 GameObject:
   m_ObjectHideFlags: 0
@@ -4270,7 +4303,7 @@ MonoBehaviour:
   Type: 11
   Active: 1
   Simulated: 0
-  CanBeCut: 1
+  CanBeCut: 0
   AdditionalDamping: 1
   ProjectionEnabled: 0
   Monitor: 0
@@ -4286,6 +4319,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!1 &5249044645604825326
 GameObject:
   m_ObjectHideFlags: 0
@@ -4334,7 +4368,7 @@ MonoBehaviour:
   Type: 11
   Active: 1
   Simulated: 0
-  CanBeCut: 1
+  CanBeCut: 0
   AdditionalDamping: 1
   ProjectionEnabled: 0
   Monitor: 0
@@ -4350,6 +4384,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!1 &5265576205977940296
 GameObject:
   m_ObjectHideFlags: 0
@@ -4416,6 +4451,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!54 &5265576205977940298
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4889,7 +4925,7 @@ MonoBehaviour:
   Type: 11
   Active: 1
   Simulated: 0
-  CanBeCut: 1
+  CanBeCut: 0
   AdditionalDamping: 1
   ProjectionEnabled: 0
   Monitor: 0
@@ -4905,6 +4941,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!1 &5396225781562643607
 GameObject:
   m_ObjectHideFlags: 0
@@ -5058,6 +5095,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!54 &2407620366054866747
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5250,6 +5288,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!54 &5689968138067382423
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5444,6 +5483,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!54 &2486910680241980100
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5640,6 +5680,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!54 &4329677883064992074
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5814,7 +5855,7 @@ MonoBehaviour:
   Type: 11
   Active: 1
   Simulated: 0
-  CanBeCut: 1
+  CanBeCut: 0
   AdditionalDamping: 1
   ProjectionEnabled: 0
   Monitor: 0
@@ -5830,6 +5871,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!1 &6321078640221604586
 GameObject:
   m_ObjectHideFlags: 0
@@ -5909,7 +5951,7 @@ MonoBehaviour:
   Type: 11
   Active: 1
   Simulated: 0
-  CanBeCut: 1
+  CanBeCut: 0
   AdditionalDamping: 1
   ProjectionEnabled: 0
   Monitor: 0
@@ -5925,6 +5967,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!1 &6882704950901146707
 GameObject:
   m_ObjectHideFlags: 0
@@ -5992,6 +6035,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!54 &3956360405482496430
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6166,7 +6210,7 @@ MonoBehaviour:
   Type: 11
   Active: 1
   Simulated: 0
-  CanBeCut: 1
+  CanBeCut: 0
   AdditionalDamping: 1
   ProjectionEnabled: 0
   Monitor: 0
@@ -6182,6 +6226,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!1 &7141186416669514374
 GameObject:
   m_ObjectHideFlags: 0
@@ -6323,7 +6368,7 @@ MonoBehaviour:
   Type: 11
   Active: 1
   Simulated: 0
-  CanBeCut: 1
+  CanBeCut: 0
   AdditionalDamping: 1
   ProjectionEnabled: 0
   Monitor: 0
@@ -6339,6 +6384,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!1 &8204232744418428215
 GameObject:
   m_ObjectHideFlags: 0
@@ -6530,6 +6576,7 @@ GameObject:
   - component: {fileID: 8204232745832354476}
   - component: {fileID: 8204232745832354479}
   - component: {fileID: 2072476158}
+  - component: {fileID: 924746526}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -6567,15 +6614,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instaCut: 0
+  Praying: 0
   maniability: 0.13
   additionnalSpeed: 0
   rotationSpeed: 360
   walkMultiplier: 1
   runMultiplier: 1.5
-  aimAssist: 0.02
+  aimAssist: 0.07
   shotKnockback: 7000
   limbEjection: 3000
   shootCooldown: 0.3
+  playerLayerTemp:
+    serializedVersion: 2
+    m_Bits: 8
   whatIsGround:
     serializedVersion: 2
     m_Bits: 0
@@ -6602,6 +6653,7 @@ MonoBehaviour:
   camForward: {fileID: 0}
   camRight: {fileID: 0}
   aimCursor: {fileID: 0}
+  gunTip: {fileID: 2242731649957293181}
 --- !u!114 &2072476158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6615,7 +6667,112 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   typePriority: 030000000800000000000000
+  limbsPriority:
+  - {fileID: 3956360405482496416}
+  - {fileID: 2953094415073120035}
+  - {fileID: 647045683261742852}
+  - {fileID: 2126584155240893609}
+  - {fileID: 4104078028064304130}
   ragdollManager: {fileID: 9014557080588789189}
+--- !u!120 &924746526
+LineRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8204232745832354477}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 0
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Positions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  m_Parameters:
+    serializedVersion: 3
+    widthMultiplier: 1
+    widthCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.01
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    colorGradient:
+      serializedVersion: 2
+      key0: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    numCornerVertices: 0
+    numCapVertices: 0
+    alignment: 0
+    textureMode: 0
+    shadowBias: 0.5
+    generateLightingData: 0
+  m_UseWorldSpace: 1
+  m_Loop: 0
 --- !u!1 &8319540147932211682
 GameObject:
   m_ObjectHideFlags: 0
@@ -6718,6 +6875,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!54 &7902938501930094507
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6892,7 +7050,7 @@ MonoBehaviour:
   Type: 11
   Active: 1
   Simulated: 0
-  CanBeCut: 1
+  CanBeCut: 0
   AdditionalDamping: 1
   ProjectionEnabled: 0
   Monitor: 0
@@ -6908,6 +7066,7 @@ MonoBehaviour:
   m_ConfigurableJoint: {fileID: 0}
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
+  IsCut: 0
 --- !u!1 &9014557080588789187
 GameObject:
   m_ObjectHideFlags: 0
