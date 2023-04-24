@@ -8,13 +8,17 @@ public class BaseEnemy : MonoBehaviour
     [SerializeField] private int HP;
     [SerializeField] private float AttackRange, RunRange, AttackCD;
     [SerializeField] private List<Hitbox> hitboxes = new List<Hitbox>();
-    [SerializeField] private GameObject pelvis, player;
+    [SerializeField] private GameObject pelvis, pathfinder, targetPlayer;
     [SerializeField] private DiversuitRagdoll ragdoll;
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private Animator animator;
+    [SerializeField] private EnemyPathing pathingObject;
+    [SerializeField] private Transform pathfinderLookAt;
     Collider[] cols;
     private float attackTimer;
     private RagdollLimb grabbedLimb;
+
+    private GameObject followTarget;
 
     [HideInInspector] public bool Dead;
 
@@ -28,9 +32,15 @@ public class BaseEnemy : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        pathingObject.Init(targetPlayer.transform);
+
+        FollowPathfinder();
+    }
+
     private void Update()
     {
-
         /*
         bool inRange = Physics.CheckSphere(pelvis.transform.position, AttackRange, playerLayer);
         if (inRange)
@@ -54,6 +64,8 @@ public class BaseEnemy : MonoBehaviour
             {
                 DropLimb();
 
+                FollowTarget();
+
                 animator.SetTrigger("Run");
 
                 foreach (var item in hitboxes)
@@ -72,8 +84,17 @@ public class BaseEnemy : MonoBehaviour
                 attackTimer = 0;
         }
 
-        Vector3 target = new Vector3(player.transform.position.x, pelvis.transform.position.y, player.transform.position.z);
-        pelvis.transform.LookAt(target);
+        Vector3 target = new Vector3(followTarget.transform.position.x, pelvis.transform.position.y, followTarget.transform.position.z);
+
+        if (followTarget == pathfinder)
+        {
+            pathfinderLookAt.LookAt(target);
+            pelvis.transform.rotation = Quaternion.Lerp(pelvis.transform.rotation, pathfinderLookAt.rotation, 0.17f);
+        }
+        else
+        {
+            pelvis.transform.LookAt(target);
+        }
     }
 
     private void DropLimb()
@@ -90,6 +111,11 @@ public class BaseEnemy : MonoBehaviour
 
             grabbedLimb = null;
         }
+    }
+
+    public void EndDash()
+    {
+        FollowPathfinder();
     }
 
     public void DismemberLimb()
@@ -120,6 +146,7 @@ public class BaseEnemy : MonoBehaviour
                             Collider col = grabbedLimb.GetComponent<Collider>();
                             if (col != null)
                                 col.enabled = false;
+
                             parent = item.transform;
                             caught = true;
                         }
@@ -148,6 +175,8 @@ public class BaseEnemy : MonoBehaviour
         {
             Dead = true;
             animator.SetBool("Dead", true);
+            FollowTarget();
+            Destroy(pathingObject);
             StartCoroutine(DieCoroutine());
         }
     }
@@ -179,5 +208,15 @@ public class BaseEnemy : MonoBehaviour
         // Draw a yellow sphere at the transform's position
         Gizmos.color = Color.yellow;
         Gizmos.DrawSphere(pelvis.transform.position, RunRange);
+    }
+
+    private void FollowPathfinder()
+    {
+        followTarget = pathfinder;
+    }
+
+    private void FollowTarget()
+    {
+        followTarget = targetPlayer;
     }
 }

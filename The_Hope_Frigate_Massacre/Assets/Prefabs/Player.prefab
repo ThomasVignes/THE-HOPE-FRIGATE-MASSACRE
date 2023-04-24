@@ -6669,11 +6669,25 @@ MonoBehaviour:
   typePriority: 030000000800000000000000
   limbsPriority:
   - {fileID: 3956360405482496416}
+  - {fileID: 2126584155240893609}
   - {fileID: 2953094415073120035}
   - {fileID: 647045683261742852}
-  - {fileID: 2126584155240893609}
-  - {fileID: 4104078028064304130}
   ragdollManager: {fileID: 9014557080588789189}
+  OnLastLimbLost:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GameStateManager, Assembly-CSharp
+        m_MethodName: Lose
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!120 &924746526
 LineRenderer:
   m_ObjectHideFlags: 0

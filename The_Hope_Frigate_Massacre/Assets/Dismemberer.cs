@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Whumpus;
 
 public class Dismemberer : MonoBehaviour
@@ -8,6 +9,8 @@ public class Dismemberer : MonoBehaviour
     [SerializeField] private List<LimbType> typePriority = new List<LimbType>();
     [SerializeField] private List<RagdollLimb> limbsPriority = new List<RagdollLimb>();
     [SerializeField] private DiversuitRagdoll ragdollManager;
+
+    public UnityEvent OnLastLimbLost;
 
     public void Dismember()
     {
@@ -61,8 +64,14 @@ public class Dismemberer : MonoBehaviour
             {
                 limb.CutLimb();
                 cutLimb = limb;
+
+                if (limb == limbsPriority[limbsPriority.Count - 1])
+                    OnLastLimbLost.Invoke();
+
                 break;
             }
+
+
         }
     }
 }
