@@ -52,18 +52,7 @@ public class BaseEnemy : MonoBehaviour
 
             if (inRange)
             {
-                if (grabbedLimb != null)
-                {
-                    Collider col = grabbedLimb.GetComponent<Collider>();
-                    if (col != null)
-                        col.enabled = true;
-
-                    grabbedLimb.transform.parent = null;
-
-                    grabbedLimb.rb.constraints = RigidbodyConstraints.None;
-
-                    grabbedLimb = null;
-                }
+                DropLimb();
 
                 animator.SetTrigger("Run");
 
@@ -85,6 +74,22 @@ public class BaseEnemy : MonoBehaviour
 
         Vector3 target = new Vector3(player.transform.position.x, pelvis.transform.position.y, player.transform.position.z);
         pelvis.transform.LookAt(target);
+    }
+
+    private void DropLimb()
+    {
+        if (grabbedLimb != null)
+        {
+            Collider col = grabbedLimb.GetComponent<Collider>();
+            if (col != null)
+                col.enabled = true;
+
+            grabbedLimb.transform.parent = null;
+
+            grabbedLimb.rb.constraints = RigidbodyConstraints.None;
+
+            grabbedLimb = null;
+        }
     }
 
     public void DismemberLimb()
@@ -159,6 +164,8 @@ public class BaseEnemy : MonoBehaviour
     }
     public void Die()
     {
+        DropLimb();
+
         animator.SetBool("Walking", false);
         var rb = pelvis.GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.None;
