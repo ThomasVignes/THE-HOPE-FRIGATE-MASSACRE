@@ -14,6 +14,7 @@ public class BaseEnemy : MonoBehaviour
     [SerializeField] private Animator animator;
     Collider[] cols;
     private float attackTimer;
+    private RagdollLimb grabbedLimb;
 
     [HideInInspector] public bool Dead;
 
@@ -51,6 +52,19 @@ public class BaseEnemy : MonoBehaviour
 
             if (inRange)
             {
+                if (grabbedLimb != null)
+                {
+                    Collider col = grabbedLimb.GetComponent<Collider>();
+                    if (col != null)
+                        col.enabled = true;
+
+                    grabbedLimb.transform.parent = null;
+
+                    grabbedLimb.rb.constraints = RigidbodyConstraints.None;
+
+                    grabbedLimb = null;
+                }
+
                 animator.SetTrigger("Run");
 
                 foreach (var item in hitboxes)
@@ -97,8 +111,10 @@ public class BaseEnemy : MonoBehaviour
 
                             hitLimb.ragdollManager.transform.parent.GetComponent<Dismemberer>().DismemberSpecific(out cutLimb);
 
-                            //cutLimb = item.LastHitObject.GetComponent<RagdollLimb>();
-                            cutLimb.CutLimb();
+                            grabbedLimb = cutLimb;
+                            Collider col = grabbedLimb.GetComponent<Collider>();
+                            if (col != null)
+                                col.enabled = false;
                             parent = item.transform;
                             caught = true;
                         }
