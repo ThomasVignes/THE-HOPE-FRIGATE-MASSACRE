@@ -147,6 +147,8 @@ public class BaseEnemy : MonoBehaviour
                             if (col != null)
                                 col.enabled = false;
 
+                            //grabbedLimb.gameObject.layer = pelvis.gameObject.layer;
+
                             parent = item.transform;
                             caught = true;
                         }

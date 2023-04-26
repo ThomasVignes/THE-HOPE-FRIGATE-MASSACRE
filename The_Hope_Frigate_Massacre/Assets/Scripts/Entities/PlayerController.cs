@@ -184,7 +184,6 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            
             Collider[] cols = Physics.OverlapSphere(pelvis.transform.position, 1f, playerLayerTemp);
 
             foreach (var item in cols)

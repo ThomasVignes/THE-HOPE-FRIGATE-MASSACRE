@@ -6636,7 +6636,7 @@ MonoBehaviour:
   overrideActions:
   - Name: Punch
     Duration: 1.2
-  MouseSensitivity: 300
+  MouseSensitivity: 350
   CamXAngle: 0
   CamYAngle: 0
   ResetDelay: 0
