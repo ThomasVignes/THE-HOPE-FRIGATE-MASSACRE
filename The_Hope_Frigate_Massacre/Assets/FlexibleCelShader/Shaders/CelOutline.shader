@@ -29,87 +29,88 @@
 		_FresnelPower("Soft Edge Light Size", Range(0, 1)) = 0
 		_FresnelShadowDropoff("Soft Edge Light Dropoff", range(0, 1)) = 0
 	}
-	
-	SubShader
-	{
-		
-		// This pass renders the object
-		Cull back
-		Pass
+
+		SubShader
 		{
-			Tags{ "LightMode" = "ForwardBase" }
 
-			CGPROGRAM
-			#pragma vertex vert
-			#pragma fragment frag
-			#include "UnityCG.cginc"
-			#include "Lighting.cginc"
-
-			#pragma multi_compile_fwdbase nolightmap nodirlightmap nodynlightmap novertexlight
-			#include "AutoLight.cginc"
-
-			struct v2f
+			// This pass renders the object
+			Cull back
+			Pass
 			{
-				float2 uv : TEXCOORD0;
-				SHADOW_COORDS(1)
-				float3 worldNormal : TEXCOORD2;
-				float3 worldTangent : TEXCOORD3;
-				float3 worldBitangent : TEXCOORD4;
-				float4 worldPos : TEXCOORD5;
-				float4 pos : SV_POSITION;
-			};
+				Tags{ "LightMode" = "ForwardBase" }
 
-			v2f vert(appdata_tan v)
-			{
-				v2f o;
+				CGPROGRAM
+				#pragma vertex vert
+				#pragma fragment frag
+				#include "UnityCG.cginc"
+				#include "Lighting.cginc"
 
-				// UV data
-				o.uv = v.texcoord;
+				#pragma multi_compile_fwdbase nolightmap nodirlightmap nodynlightmap novertexlight
+				#include "AutoLight.cginc"
 
-				// Position data
-				o.worldPos = mul(unity_ObjectToWorld, v.vertex);
-				o.pos = mul(UNITY_MATRIX_VP, o.worldPos);
+				struct v2f
+				{
+					float2 uv : TEXCOORD0;
+					SHADOW_COORDS(1)
+					float3 worldNormal : TEXCOORD2;
+					float3 worldTangent : TEXCOORD3;
+					float3 worldBitangent : TEXCOORD4;
+					float4 worldPos : TEXCOORD5;
+					float4 pos : SV_POSITION;
+				};
 
-				// Normal data
-				o.worldNormal = UnityObjectToWorldNormal(v.normal);
-				o.worldTangent = UnityObjectToWorldNormal(v.tangent);
-				o.worldBitangent = cross(o.worldTangent, o.worldNormal);
+				v2f vert(appdata_tan v)
+				{
+					v2f o;
 
-				// Compute shadows data
-				TRANSFER_SHADOW(o);
+					// UV data
+					o.uv = v.texcoord;
 
-				return o;
-			}
+					// Position data
+					o.worldPos = mul(unity_ObjectToWorld, v.vertex);
+					o.pos = mul(UNITY_MATRIX_VP, o.worldPos);
 
-			float4    _Color;
-			sampler2D _MainTex;
-			uniform float4 _MainTex_ST;
-			sampler2D _NormalTex;
-			uniform float4 _NormalTex_ST;
-			sampler2D _EmmisTex;
-			uniform float4 _EmmisTex_ST;
-			int       _RampLevels;
-			float     _LightScalar;
-			float     _HighIntensity;
-			float4    _HighColor;
-			float     _LowIntensity;
-			float4    _LowColor;
-			float     _RimPower;
-			float	  _RimAlpha;
-			float4    _RimColor;
-			float     _RimDropOff;
-			float     _FresnelBrightness;
-			float     _FresnelPower;
-			float4    _FresnelColor;
-			float     _FresnelShadowDropoff;
+					// Normal data
+					o.worldNormal = UnityObjectToWorldNormal(v.normal);
+					o.worldTangent = UnityObjectToWorldNormal(v.tangent);
+					o.worldBitangent = cross(o.worldTangent, o.worldNormal);
 
-			fixed4 frag(v2f i) : SV_Target
-			{
-				_RampLevels -= 1;
+					// Compute shadows data
+					TRANSFER_SHADOW(o);
+
+					return o;
+				}
+
+				float4    _Color;
+				sampler2D _MainTex;
+				uniform float4 _MainTex_ST;
+				sampler2D _NormalTex;
+				uniform float4 _NormalTex_ST;
+				sampler2D _EmmisTex;
+				uniform float4 _EmmisTex_ST;
+				int       _RampLevels;
+				float     _LightScalar;
+				float     _HighIntensity;
+				float4    _HighColor;
+				float     _LowIntensity;
+				float4    _LowColor;
+				float     _RimPower;
+				float	  _RimAlpha;
+				float4    _RimColor;
+				float     _RimDropOff;
+				float     _FresnelBrightness;
+				float     _FresnelPower;
+				float4    _FresnelColor;
+				float     _FresnelShadowDropoff;
+
+				fixed4 frag(v2f i) : SV_Target
+				{
+					_RampLevels -= 1;
 
 				// Get view direction && light direction for rim lighting
 				float3 viewDirection = normalize(_WorldSpaceCameraPos.xyz - i.worldPos.xyz);
 				float3 lightDirection = normalize(_WorldSpaceLightPos0.xyz);
+				float3 forward = mul((float3x3)unity_CameraToWorld, float3(0, 0, -1));
 
 				// Sample textures
 				fixed4 col = tex2D(_MainTex, i.uv * _MainTex_ST.xy + _MainTex_ST.zw);
@@ -119,6 +120,7 @@
 				// Get normal
 				float3 worldNormal = float3(i.worldTangent * tangentNormal.r + i.worldBitangent * tangentNormal.g + i.worldNormal * tangentNormal.b);
 
+
 				// Rim Lighting
 				half factor = dot(viewDirection, worldNormal);
 				half fresnelFactor = 1 - min(pow(max(1 - factor, 0), (1 - _FresnelPower) * 10), 1);
@@ -127,7 +129,7 @@
 				fixed shadow = SHADOW_ATTENUATION(i);
 
 				// Calculate light intensity
-				float intensity = dot(worldNormal, lightDirection);
+				float intensity = dot(worldNormal, forward);
 				intensity = clamp(intensity * _LightScalar, 0, 1);
 
 				// Factor in the shadow
@@ -212,7 +214,7 @@
 
 		// Shadow casting
 		UsePass "Legacy Shaders/VertexLit/SHADOWCASTER"
-	}
+		}
 
-	CustomEditor "CelCustomEditor"
+			CustomEditor "CelCustomEditor"
 }

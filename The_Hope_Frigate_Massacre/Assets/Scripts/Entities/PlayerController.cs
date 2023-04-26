@@ -296,7 +296,23 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                lr.SetPosition(1, ray.origin + ray.direction * rayLength);
+                //Check for any other collision
+                if (Physics.SphereCast(ray, aimAssist, out hit, rayLength))
+                {
+                    lr.SetPosition(1, hit.point);
+
+                    //Play hit vfx
+
+                    Rigidbody rb = hit.transform.gameObject.GetComponent<Rigidbody>();
+                    if (rb != null)
+                        rb.AddForce(ray.direction.normalized * shotKnockback/10);
+                }
+                else
+                {
+                    lr.SetPosition(1, ray.origin + ray.direction * rayLength);
+                    
+                }
+
                 CameraEffectsManager.Instance.ScreenShake(0.03f);
             }
 
