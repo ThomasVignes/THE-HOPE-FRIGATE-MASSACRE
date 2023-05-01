@@ -10,7 +10,7 @@ public class EnemyPathing : MonoBehaviour
     public Transform target;
     [SerializeField] private NavMeshAgent navMesh;
 
-    public float maxDistFromEnemy;
+    public float resetOffset = 0.3f, maxDistFromEnemy;
     public Transform enemy;
 
     public void Init(Transform targ)
@@ -49,7 +49,7 @@ public class EnemyPathing : MonoBehaviour
 
     public void ResetPath()
     {
-        transform.position = enemy.position + enemy.forward.normalized * 0.3f;
+        transform.position = enemy.position + enemy.forward.normalized * resetOffset;
     }
 
 }

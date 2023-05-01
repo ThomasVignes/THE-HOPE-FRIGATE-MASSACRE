@@ -177,6 +177,7 @@ MonoBehaviour:
   IsStopped: 1
   target: {fileID: 0}
   navMesh: {fileID: 1474688261}
+  resetOffset: 0.3
   maxDistFromEnemy: 1.3
   enemy: {fileID: 2981824592590987035}
 --- !u!195 &1474688261
@@ -1622,7 +1623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Resistant: 0
-  HP: 4
+  HP: 6
   limb: {fileID: 0}
   HasBeenCut: 0
   OnCut:
@@ -1929,7 +1930,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Resistant: 0
-  HP: 4
+  HP: 6
   limb: {fileID: 0}
   HasBeenCut: 0
   OnCut:
@@ -2926,7 +2927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Resistant: 0
-  HP: 4
+  HP: 6
   limb: {fileID: 0}
   HasBeenCut: 0
   OnCut:
@@ -5714,7 +5715,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Resistant: 0
-  HP: 4
+  HP: 6
   limb: {fileID: 0}
   HasBeenCut: 0
   OnCut:
@@ -9249,7 +9250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Resistant: 0
-  HP: 4
+  HP: 6
   limb: {fileID: 0}
   HasBeenCut: 0
   OnCut:
@@ -10588,7 +10589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Resistant: 0
-  HP: 4
+  HP: 6
   limb: {fileID: 0}
   HasBeenCut: 0
   OnCut:
