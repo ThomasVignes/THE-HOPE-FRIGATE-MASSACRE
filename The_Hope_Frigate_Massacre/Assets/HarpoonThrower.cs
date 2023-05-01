@@ -8,15 +8,15 @@ public class HarpoonThrower : MonoBehaviour
 {
     [SerializeField] private float precision, curveMultiplier = 1;
     [SerializeField] private AnimationCurve throwCurve;
-    [SerializeField] private UnityEvent OnThrowEnd;
+    [SerializeField] private UnityEvent OnThrowEnd, OnRecallEnd;
 
     private GameObject harpoonObject;
 
-    private float throwSpeed;
+    private float throwSpeed, recallSpeed;
 
     private Vector3 originalPos, endPos;
 
-    [HideInInspector] public bool Throwing, EndArc;
+    [HideInInspector] public bool Throwing, EndArc, Recalling;
 
     private float originalDist, originalY;
 
@@ -61,6 +61,23 @@ public class HarpoonThrower : MonoBehaviour
         {
             harpoonObject.transform.position += Vector3.Normalize(-harpoonObject.transform.right) * throwSpeed * Time.deltaTime;
         }
+
+        if (Recalling)
+        {
+            float currentDist = Vector3.Distance(harpoonObject.transform.position, transform.position);
+
+            if (currentDist > precision)
+            {
+                harpoonObject.transform.position = Vector3.MoveTowards(harpoonObject.transform.position, transform.position, recallSpeed * Time.deltaTime);
+                harpoonObject.transform.rotation = Quaternion.RotateTowards(harpoonObject.transform.rotation, transform.rotation, recallSpeed * Time.deltaTime);
+            }
+            else
+            {
+                Restart();
+                OnRecallEnd.Invoke();
+            }
+        }
+            
     }
 
     public void Throw(float speed, Vector3 start, Vector3 end, LayerMask target)
@@ -78,6 +95,13 @@ public class HarpoonThrower : MonoBehaviour
         lastPos = transform.position;
 
         Throwing = true;
+    }
+
+    public void Recall(float speed)
+    {
+        recallSpeed = speed;
+
+        Recalling = true;
     }
 
     private void CreateThrowPath(Vector3 start, Vector3 end)
@@ -103,6 +127,10 @@ public class HarpoonThrower : MonoBehaviour
 
     public void Restart()
     {
+        Throwing = false;
+        EndArc = false;
+        Recalling = false;
+
         harpoonObject.transform.parent = transform;
         harpoonObject.transform.localPosition = Vector3.zero;
         harpoonObject.transform.localRotation = Quaternion.identity;

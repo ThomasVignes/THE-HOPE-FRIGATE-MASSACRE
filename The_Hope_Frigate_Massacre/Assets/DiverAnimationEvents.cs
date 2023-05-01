@@ -8,6 +8,21 @@ public class DiverAnimationEvents : MonoBehaviour
 
     public void Throw()
     {
-        diver.HarpoonThrower.Throw(diver.ThrowSpeed, diver.HarpoonThrower.transform.position, diver.PlayerSpot, diver.PlayerLayer);
+        diver.Throw();
+    }
+
+    public void RemoveBlood()
+    {
+        Blood[] blood = diver.GetComponentsInChildren<Blood>();
+
+        foreach (var b in blood)
+        {
+            Destroy(b.gameObject);
+        }
+    }
+
+    public void StartRecall()
+    {
+        diver.Recall();
     }
 }

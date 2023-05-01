@@ -10,7 +10,7 @@ public class TargetLimb : MonoBehaviour
     public int HP = 4;
     public RagdollLimb limb;
     public bool HasBeenCut;
-    public UnityEvent OnCut;
+    public UnityEvent OnHit, OnCut;
 
     private void Awake()
     {
@@ -49,5 +49,7 @@ public class TargetLimb : MonoBehaviour
         {
             SlowMoEffector.Instance.Hit(limb.rb, force, dir);
         }
+
+        OnHit.Invoke();
     }
 }
