@@ -8,7 +8,7 @@ public class HarpoonThrower : MonoBehaviour
 {
     [SerializeField] private float precision, curveMultiplier = 1;
     [SerializeField] private AnimationCurve throwCurve;
-    [SerializeField] private UnityEvent OnThrowEnd, OnRecallEnd;
+    [SerializeField] private UnityEvent OnThrowEnd, OnRecallEnd, OnCollision;
 
     private GameObject harpoonObject;
 
@@ -90,7 +90,7 @@ public class HarpoonThrower : MonoBehaviour
 
         harpoon.TargetMask = targetMask;
 
-        harpoonObject.transform.parent = null;
+        harpoonObject.transform.parent = FindObjectOfType<BoatEffect>().transform;
 
         lastPos = transform.position;
 
@@ -121,6 +121,11 @@ public class HarpoonThrower : MonoBehaviour
 
     public void Stop()
     {
+        if (Throwing || EndArc)
+        {
+            OnCollision.Invoke();
+        }
+
         Throwing = false;
         EndArc = false;
     }
@@ -134,5 +139,6 @@ public class HarpoonThrower : MonoBehaviour
         harpoonObject.transform.parent = transform;
         harpoonObject.transform.localPosition = Vector3.zero;
         harpoonObject.transform.localRotation = Quaternion.identity;
+        harpoon.hitLimb = null;
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Whumpus;
 
 public class Harpoon : MonoBehaviour
@@ -10,6 +11,7 @@ public class Harpoon : MonoBehaviour
     [HideInInspector] public LayerMask TargetMask;
 
     [HideInInspector] public RagdollLimb hitLimb;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == WhumpusUtilities.ToLayer(TargetMask))

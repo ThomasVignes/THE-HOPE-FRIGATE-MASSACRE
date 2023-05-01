@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Whumpus;
 
 public class BaseEnemy : MonoBehaviour
@@ -19,6 +20,8 @@ public class BaseEnemy : MonoBehaviour
     private RagdollLimb grabbedLimb;
 
     private GameObject followTarget;
+
+    public UnityEvent OnSprint, OnHit;
 
     [HideInInspector] public bool Dead;
 
@@ -74,6 +77,8 @@ public class BaseEnemy : MonoBehaviour
                 }
 
                 attackTimer = AttackCD;
+
+                OnSprint.Invoke();
             }
         }
         else
@@ -171,6 +176,8 @@ public class BaseEnemy : MonoBehaviour
 
     public void Hurt()
     {
+        OnHit.Invoke();
+
         HP--;
 
         if (HP <= 0 && !Dead)

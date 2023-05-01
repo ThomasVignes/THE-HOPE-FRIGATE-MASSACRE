@@ -52,6 +52,7 @@ public class DiverEnemy : EnemyBehaviour
             {
                 recalled = true;
                 animator.SetTrigger("StartRecall");
+                FollowPathfinder();
             }
 
             if (attackTimer > 0)
