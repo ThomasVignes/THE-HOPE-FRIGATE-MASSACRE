@@ -25,6 +25,8 @@ public class BaseEnemy : MonoBehaviour
 
     [HideInInspector] public bool Dead;
 
+    Transform parent;
+
     private void Awake()
     {
         Hitbox[] hbs = GetComponentsInChildren<Hitbox>();
@@ -123,13 +125,11 @@ public class BaseEnemy : MonoBehaviour
         FollowPathfinder();
     }
 
-    public void DismemberLimb()
+    public void GrabLimb()
     {
         bool caught = false;
 
         RagdollLimb cutLimb = null;
-
-        Transform parent = null;
 
         foreach (var item in hitboxes)
         {
@@ -145,7 +145,7 @@ public class BaseEnemy : MonoBehaviour
                             CameraEffectsManager.Instance.ScreenShake();
                             animator.SetTrigger("Dismember");
 
-                            hitLimb.ragdollManager.transform.parent.GetComponent<Dismemberer>().DismemberSpecific(out cutLimb);
+                            hitLimb.ragdollManager.transform.parent.GetComponent<Dismemberer>().GetSpecific(out cutLimb);
 
                             grabbedLimb = cutLimb;
                             Collider col = grabbedLimb.GetComponent<Collider>();
@@ -172,6 +172,16 @@ public class BaseEnemy : MonoBehaviour
             cutLimb.transform.localPosition = new Vector3(-0.16f, 0, 0);
         }
         
+    }
+
+    public void DismemberLimb()
+    {
+        RagdollLimb cutLimb = null;
+        grabbedLimb.ragdollManager.transform.parent.GetComponent<Dismemberer>().DismemberSpecific(out cutLimb);
+
+        cutLimb.transform.parent = parent;
+
+
     }
 
     public void Hurt()

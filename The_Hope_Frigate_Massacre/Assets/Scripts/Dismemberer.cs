@@ -54,6 +54,19 @@ public class Dismemberer : MonoBehaviour
         }
     }
 
+    public void GetSpecific(out RagdollLimb cutLimb)
+    {
+        cutLimb = null;
+
+        foreach (var limb in limbsPriority)
+        {
+            if (!limb.IsCut)
+            {
+                cutLimb = limb;
+                break;
+            }
+        }
+    }
     public void DismemberSpecific(out RagdollLimb cutLimb)
     {
         cutLimb = null;
@@ -67,6 +80,9 @@ public class Dismemberer : MonoBehaviour
 
                 if (limb == limbsPriority[limbsPriority.Count - 1])
                     OnLastLimbLost.Invoke();
+
+                CameraEffectsManager.Instance.ScreenShake();
+                BloodManager.Instance.ActivateUIBlood();
 
                 break;
             }

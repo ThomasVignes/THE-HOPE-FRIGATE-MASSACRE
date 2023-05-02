@@ -1,11 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BloodManager : MonoBehaviour
 {
     public static BloodManager Instance;
     [SerializeField] private GameObject bloodPrefab;
+
+    [SerializeField] private float UIBloodStay;
+    [SerializeField] private Image UIBlood;
+
+    private float UIBloodTimer;
 
     private void Awake()
     {
@@ -13,6 +19,35 @@ public class BloodManager : MonoBehaviour
             Instance = this;
         else
             Destroy(this);
+    }
+
+    private void Update()
+    {
+        if (UIBloodTimer > 0)
+            UIBloodTimer -= Time.deltaTime;
+        else
+        {
+            if (UIBloodTimer != 0)
+                UIBloodTimer = 0;
+
+            if (UIBlood.color.a > 0)
+            {
+                Color old = UIBlood.color;
+                Color newCol = new Color(old.r, old.g, old.b, Mathf.Lerp(old.a, 0, Time.deltaTime));
+
+                UIBlood.color = newCol;
+            }
+        }
+    }
+
+    public void ActivateUIBlood()
+    {
+        Color old = UIBlood.color;
+        Color newCol = new Color(old.r, old.g, old.b, 1);
+
+        UIBlood.color = newCol;
+
+        UIBloodTimer = UIBloodStay;
     }
 
     public void SpawnBlood(Vector3 pos)

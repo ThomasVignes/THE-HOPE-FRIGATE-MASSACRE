@@ -18,6 +18,8 @@ public class HarpoonThrower : MonoBehaviour
 
     [HideInInspector] public bool Throwing, EndArc, Recalling;
 
+    private bool canCut;
+
     private float originalDist, originalY;
 
     private LayerMask targetMask;
@@ -95,13 +97,24 @@ public class HarpoonThrower : MonoBehaviour
         lastPos = transform.position;
 
         Throwing = true;
+
+        canCut = true;
     }
 
     public void Recall(float speed)
     {
         recallSpeed = speed;
-
         Recalling = true;
+
+        StartCoroutine(CutDelay());
+    }
+
+    IEnumerator CutDelay()
+    {
+        yield return new WaitForSeconds(0.17f);
+
+        harpoon.Cut();
+        canCut = false;
     }
 
     private void CreateThrowPath(Vector3 start, Vector3 end)
@@ -139,6 +152,10 @@ public class HarpoonThrower : MonoBehaviour
         harpoonObject.transform.parent = transform;
         harpoonObject.transform.localPosition = Vector3.zero;
         harpoonObject.transform.localRotation = Quaternion.identity;
-        harpoon.hitLimb = null;
+
+        if (canCut)
+            harpoon.Cut();
+
+        canCut = false;
     }
 }

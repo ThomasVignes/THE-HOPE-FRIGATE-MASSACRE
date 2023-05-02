@@ -12,6 +12,20 @@ public class Harpoon : MonoBehaviour
 
     [HideInInspector] public RagdollLimb hitLimb;
 
+    public void Cut()
+    {
+        if (hitLimb != null)
+        {
+            RagdollLimb cutLimb = null;
+            hitLimb.ragdollManager.transform.parent.GetComponent<Dismemberer>().DismemberSpecific(out cutLimb);
+
+            cutLimb.transform.parent = transform;
+            cutLimb.transform.localPosition = Vector3.zero;
+
+            hitLimb = null;
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == WhumpusUtilities.ToLayer(TargetMask))
@@ -30,7 +44,8 @@ public class Harpoon : MonoBehaviour
 
                             CameraEffectsManager.Instance.ScreenShake();
 
-                            hitLimb.ragdollManager.transform.parent.GetComponent<Dismemberer>().DismemberSpecific(out cutLimb);
+                            //hitLimb.ragdollManager.transform.parent.GetComponent<Dismemberer>().DismemberSpecific(out cutLimb);
+                            hitLimb.ragdollManager.transform.parent.GetComponent<Dismemberer>().GetSpecific(out cutLimb);
 
                             Collider col = cutLimb.GetComponent<Collider>();
 
@@ -44,6 +59,8 @@ public class Harpoon : MonoBehaviour
 
                             cutLimb.transform.parent = transform;
                             cutLimb.transform.localPosition = Vector3.zero;
+
+                            hitLimb = cutLimb;
                         }
 
                     }

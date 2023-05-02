@@ -7,7 +7,7 @@ public class BaseEnemyAnimationEvents : MonoBehaviour
     [SerializeField] BaseEnemy enemy;
     public void ScreenShake()
     {
-        CameraEffectsManager.Instance.ScreenShake();
+        enemy.DismemberLimb();
     }
 
     public void DashEnd()
