@@ -12,6 +12,8 @@ public class Harpoon : MonoBehaviour
 
     [HideInInspector] public RagdollLimb hitLimb;
 
+    [HideInInspector] public bool Ready;
+
     public void Cut()
     {
         if (hitLimb != null)
@@ -30,7 +32,7 @@ public class Harpoon : MonoBehaviour
     {
         if (other.gameObject.layer == WhumpusUtilities.ToLayer(TargetMask))
         {
-            if (hitLimb == null)
+            if (hitLimb == null && Ready)
             {
                 hitLimb = other.GetComponent<RagdollLimb>();
 
@@ -61,6 +63,8 @@ public class Harpoon : MonoBehaviour
                             cutLimb.transform.localPosition = Vector3.zero;
 
                             hitLimb = cutLimb;
+
+                            Ready = false;
                         }
 
                     }
@@ -69,6 +73,7 @@ public class Harpoon : MonoBehaviour
         }
         else
         {
+            Ready = false;
             Thrower.Stop();
         }
     }

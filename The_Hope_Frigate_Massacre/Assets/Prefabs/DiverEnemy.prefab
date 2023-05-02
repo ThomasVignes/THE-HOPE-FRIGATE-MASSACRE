@@ -2218,6 +2218,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   hitLimb: {fileID: 0}
+  Ready: 1
 --- !u!1 &1736149628785644761
 GameObject:
   m_ObjectHideFlags: 0

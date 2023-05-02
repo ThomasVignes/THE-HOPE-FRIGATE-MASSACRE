@@ -99,6 +99,8 @@ public class HarpoonThrower : MonoBehaviour
         Throwing = true;
 
         canCut = true;
+
+        harpoon.Ready = true;
     }
 
     public void Recall(float speed)

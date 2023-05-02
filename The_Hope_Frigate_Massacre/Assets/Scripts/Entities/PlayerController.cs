@@ -210,7 +210,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void Death()
+    public void Death()
     {
         var rb = pelvis.GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.None;
