@@ -11223,7 +11223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5562199878449020000, guid: 62fa4b3bfdc23bf418c58b90781f12df, type: 3}
       propertyPath: OnHit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DismemberLimb
+      value: GrabLimb
       objectReference: {fileID: 0}
     - target: {fileID: 5562199878449020000, guid: 62fa4b3bfdc23bf418c58b90781f12df, type: 3}
       propertyPath: OnHit.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
