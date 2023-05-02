@@ -136,6 +136,7 @@ public class HarpoonThrower : MonoBehaviour
     {
         if (Throwing || EndArc)
         {
+            CameraEffectsManager.Instance.ScreenShake(0.3f);
             OnCollision.Invoke();
         }
 
