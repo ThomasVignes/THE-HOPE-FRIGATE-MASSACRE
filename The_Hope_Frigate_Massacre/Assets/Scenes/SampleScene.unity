@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.091420315, g: 0.3329529, b: 0.43130815, a: 1}
+  m_IndirectSpecularColor: {r: 0.09124676, g: 0.33287907, b: 0.4313666, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10000,21 +10000,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 1957231422}
     m_Modifications:
     - target: {fileID: 282256185, guid: b4b6dd73d0aacfd4b94b64213806f8b1, type: 3}
-      propertyPath: HP
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 282256185, guid: b4b6dd73d0aacfd4b94b64213806f8b1, type: 3}
-      propertyPath: Invincible
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 282256185, guid: b4b6dd73d0aacfd4b94b64213806f8b1, type: 3}
       propertyPath: targetPlayer
       value: 
       objectReference: {fileID: 4071879165333705952}
-    - target: {fileID: 282256185, guid: b4b6dd73d0aacfd4b94b64213806f8b1, type: 3}
-      propertyPath: maxStunCounter
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 396190712, guid: b4b6dd73d0aacfd4b94b64213806f8b1, type: 3}
       propertyPath: target
       value: 
@@ -34675,6 +34663,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f989a22075fc10e439c9c8d4e0049b6b, type: 3}
   m_PrefabInstance: {fileID: 936098450}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &939016403 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6670391778961312880, guid: da609860056c6a347b4efd59d6e53e87, type: 3}
+  m_PrefabInstance: {fileID: 38162959}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &939183465
 PrefabInstance:
