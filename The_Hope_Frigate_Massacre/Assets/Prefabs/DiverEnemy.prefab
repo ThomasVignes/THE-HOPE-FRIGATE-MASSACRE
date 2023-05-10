@@ -6248,12 +6248,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1608f5bbad97ad4997863994a98ee8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 4
+  Invincible: 0
+  HP: 3
   hitboxes: []
   pelvis: {fileID: 137125940}
   pathingObject: {fileID: 396190712}
   pathfinderLookAt: {fileID: 2060503336}
   targetPlayer: {fileID: 0}
+  maxStunCounter: 4
   throwSpeed: 20
   recallSpeed: 27
   throwRange: 11
@@ -6265,6 +6267,7 @@ MonoBehaviour:
   harpoonThrower: {fileID: 1927587823}
   ragdoll: {fileID: 0}
   showGizmos: 0
+  Dead: 0
 --- !u!1 &4274569806435927712
 GameObject:
   m_ObjectHideFlags: 0
