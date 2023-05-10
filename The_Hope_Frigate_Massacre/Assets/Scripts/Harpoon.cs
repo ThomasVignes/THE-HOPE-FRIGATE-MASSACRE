@@ -74,6 +74,11 @@ public class Harpoon : MonoBehaviour
         else
         {
             Ready = false;
+
+            Rigidbody rb = other.GetComponent<Rigidbody>();
+            if (rb != null)
+                rb.AddForce(-transform.right.normalized * 100f);
+
             Thrower.Stop();
         }
     }

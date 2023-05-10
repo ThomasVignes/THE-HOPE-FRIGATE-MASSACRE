@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour
 {
+    public bool Invincible;
     public int HP;
     public List<Hitbox> hitboxes = new List<Hitbox>();
     public GameObject pelvis;
