@@ -54,6 +54,8 @@ public class PlayerController : MonoBehaviour
 
     public DiversuitRagdoll PlayerRagdoll { get { return playerRagdoll; } }
 
+    public Transform Pelvis { get { return pelvis; } }
+
     private void Start()
     {
         playerRagdoll.Hit += () => Hit();
@@ -130,9 +132,6 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.F11))
-                Death();
-
             if (Input.GetKeyDown(KeyCode.F))
             {
                 RarmAction();

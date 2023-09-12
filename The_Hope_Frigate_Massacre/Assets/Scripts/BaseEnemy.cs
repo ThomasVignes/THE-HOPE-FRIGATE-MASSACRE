@@ -39,6 +39,8 @@ public class BaseEnemy : MonoBehaviour
 
     private void Start()
     {
+
+        targetPlayer = FindObjectOfType<PlayerController>().Pelvis.gameObject;
         pathingObject.Init(targetPlayer.transform);
 
         FollowPathfinder();

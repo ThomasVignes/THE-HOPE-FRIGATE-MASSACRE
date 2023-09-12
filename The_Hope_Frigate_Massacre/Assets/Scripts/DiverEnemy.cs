@@ -29,6 +29,8 @@ public class DiverEnemy : EnemyBehaviour
 
     void Start()
     {
+        targetPlayer = FindObjectOfType<PlayerController>().Pelvis.gameObject;
+
         stunCounter = maxStunCounter;
 
         base.Init();
