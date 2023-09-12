@@ -44,7 +44,7 @@ public class EnemyPathing : MonoBehaviour
             {
                 ResetPath();
             }
-        }
+        }  
     }
 
     public void ResetPath()
