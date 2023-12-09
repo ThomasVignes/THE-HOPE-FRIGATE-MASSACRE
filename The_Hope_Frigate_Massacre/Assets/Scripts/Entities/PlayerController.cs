@@ -1,8 +1,10 @@
 
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Windows;
 using Whumpus;
 
 [System.Serializable]
@@ -19,18 +21,20 @@ public class PlayerController : MonoBehaviour
 
     [Header("Player Values")]
     public bool Praying;
-    [SerializeField] private float maniability;
-    [SerializeField] private float additionnalSpeed;
+    [SerializeField] private float moveSpeed, slowDownAngle;
     [SerializeField] private float rotationSpeed, walkMultiplier, runMultiplier;
     [SerializeField] private float aimAssist, shotKnockback, limbEjection, shootCooldown;
     public LayerMask playerLayerTemp, whatIsGround, whatAreEnemies;
     [SerializeField] private List<OverrideAction> overrideActions = new List<OverrideAction>();
-   
+    [SerializeField] private float gravity;
+    [SerializeField] private float groundDistance = 0.2f;
+
     [Header("Camera Values")]
     [SerializeField] private float MouseSensitivity;
     [SerializeField] float CamXAngle;
     [SerializeField] float CamYAngle;
-    [SerializeField] private float ResetDelay;
+    [SerializeField] private float camLerp;
+    [SerializeField] private float FOV, aimFOV;
     [SerializeField] Vector3 CamXDir;
     [SerializeField] Vector3 CamYDir;
 
@@ -43,14 +47,17 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Transform camForward, camRight;
     [SerializeField] private GameObject aimCursor, gunTip;
+    [SerializeField] private CinemachineVirtualCamera vcam;
 
     private LineRenderer lr;
     private GunfireController gunfire;
+    private CharacterController characterController;
+
 
     float XInput, ZInput, MouseX, MouseY;
-    private float shootTimer, overrideTimer;
-    private bool running, overrideAction, inAction, rArmCut;
-    Vector3 forward, right, Dir;
+    private float shootTimer, overrideTimer, multiplier;
+    private bool running, overrideAction, inAction, rArmCut, aiming, isGrounded;
+    Vector3 forward, right, Dir, gravityVel;
 
     public DiversuitRagdoll PlayerRagdoll { get { return playerRagdoll; } }
 
@@ -61,8 +68,11 @@ public class PlayerController : MonoBehaviour
         playerRagdoll.Hit += () => Hit();
         Cursor.lockState = CursorLockMode.Locked;
 
+        characterController = GetComponent<CharacterController>();
         gunfire = GetComponentInChildren<GunfireController>();
         lr = GetComponent<LineRenderer>();
+
+        vcam.m_Lens.FieldOfView = FOV;
     }
 
     void Update()
@@ -71,8 +81,9 @@ public class PlayerController : MonoBehaviour
 
         Inputs();
 
-        NoPhysicsRotation();
+        MovementManagement();
 
+        GravityManagement();
 
         if (shootTimer > 0)
             shootTimer -= Time.deltaTime;
@@ -80,19 +91,13 @@ public class PlayerController : MonoBehaviour
             shootTimer = 0;
     }
 
-    private void FixedUpdate()
-    {
-        if (!Praying)
-        {
-            MovementManagement();
-        }
-    }
-
     private void LateUpdate()
     {
         if (!Praying)
         {
             CamMovement();
+
+            CameraLerp();
         }
     }
 
@@ -100,23 +105,55 @@ public class PlayerController : MonoBehaviour
     {
     }
 
+    public void CameraLerp()
+    {
+        if (aiming)
+        {
+            vcam.m_Lens.FieldOfView = Mathf.Lerp(vcam.m_Lens.FieldOfView, aimFOV, camLerp * 10 * Time.deltaTime); 
+        }
+        else
+        {
+            vcam.m_Lens.FieldOfView = Mathf.Lerp(vcam.m_Lens.FieldOfView, FOV, camLerp * 10 * Time.deltaTime);
+        }
+    }
+
     private void MovementManagement()
     {
-        var speed = rb.velocity.magnitude;
-        rb.velocity = Vector3.Lerp(rb.velocity.normalized, Dir, maniability) * speed;
+        if (Praying)
+            Dir = Vector3.Normalize(forward);
+
+        float angle = Vector3.Angle(transform.forward, Dir);
+
+        float speed = moveSpeed;
+
+        if (angle > slowDownAngle)
+        {
+            speed /= 3;
+        }
+
+        Vector3 move = Dir * speed * Time.deltaTime;
+
+        if (!Praying && !aiming)
+            characterController.Move(Dir * moveSpeed * multiplier * Time.deltaTime);
+
+        if (move.magnitude > 0)
+        {
+            move.y = 0;
+
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(move.normalized), rotationSpeed * Time.deltaTime);
+        }
     }
 
     private void Inputs()
     {
-        
-        ZInput = Input.GetAxis("Vertical");
-        XInput = Input.GetAxis("Horizontal");
+        ZInput = UnityEngine.Input.GetAxis("Vertical");
+        XInput = UnityEngine.Input.GetAxis("Horizontal");
 
-        MouseX = Input.GetAxis("Mouse X") * MouseSensitivity * Time.unscaledDeltaTime;
-        MouseY = Input.GetAxis("Mouse Y") * MouseSensitivity * Time.unscaledDeltaTime;
+        MouseX = UnityEngine.Input.GetAxis("Mouse X") * MouseSensitivity;
+        MouseY = UnityEngine.Input.GetAxis("Mouse Y") * MouseSensitivity;
         
 
-        float multiplier = walkMultiplier;
+        multiplier = walkMultiplier;
 
         if (overrideAction)
         {
@@ -132,36 +169,38 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.F))
             {
                 RarmAction();
             }
 
-            if (Input.GetKeyDown(KeyCode.E))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.E))
             {
                 Praying = !Praying;
                 
                 animator.SetBool("Pray", Praying);
             }
 
-            if (Input.GetMouseButton(1))
+            aiming = UnityEngine.Input.GetMouseButton(1);
+
+            if (aiming)
             {
                 if (running)
                     running = false;
 
                 Dir = Vector3.Normalize(forward);
 
-                animator.SetBool("Walk", Mathf.Abs(ZInput)> 0.1f);
+                animator.SetBool("Walk", false);
                 animator.SetFloat("WalkMultiplier", ZInput * multiplier);
 
-                if (Input.GetMouseButtonDown(0))
+                if (UnityEngine.Input.GetMouseButtonDown(0))
                 {
                     Shoot();
                 }
             }
             else
             {
-                if (Input.GetKey(KeyCode.LeftShift) && ! running)
+                if (UnityEngine.Input.GetKey(KeyCode.LeftShift) && ! running)
                 {
                     running = true;
                 }
@@ -172,16 +211,20 @@ public class PlayerController : MonoBehaviour
                 }
 
                 Dir = Vector3.Normalize(forward * ZInput + right * XInput);
-                rb.AddForce(additionnalSpeed * Dir);
+
+                float runAnimMultiplier = 1;
+
+                if (running)
+                    runAnimMultiplier = 1.3f;
 
                 animator.SetBool("Walk", Dir.magnitude > 0.1f);
-                animator.SetFloat("WalkMultiplier", 1 * multiplier);
+                animator.SetFloat("WalkMultiplier", runAnimMultiplier);
             }
         }
 
         //animator.SetBool("Block", Input.GetKey(KeyCode.Space));
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (UnityEngine.Input.GetKeyDown(KeyCode.Space))
         {
             Collider[] cols = Physics.OverlapSphere(pelvis.transform.position, 1f, playerLayerTemp);
 
@@ -198,10 +241,10 @@ public class PlayerController : MonoBehaviour
             
         }
 
-        animator.SetBool("Aim", Input.GetMouseButton(1));
+        animator.SetBool("Aim", UnityEngine.Input.GetMouseButton(1));
 
-        if (aimCursor.activeSelf != Input.GetMouseButton(1))
-            aimCursor.SetActive(Input.GetMouseButton(1));
+        if (aimCursor.activeSelf != UnityEngine.Input.GetMouseButton(1))
+            aimCursor.SetActive(UnityEngine.Input.GetMouseButton(1));
 
         if (Dir.magnitude < 0.3f)
         {
@@ -237,8 +280,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
-
     public void DetachArm()
     {
         inAction = false;
@@ -271,7 +312,7 @@ public class PlayerController : MonoBehaviour
 
                 if (target != null)
                 {
-                    target.Hit(1, shotKnockback, ray.direction.normalized);
+                    target.Hit(2, shotKnockback, ray.direction.normalized);
 
                     float scale = Random.Range(0.6f, 1f);
 
@@ -337,21 +378,6 @@ public class PlayerController : MonoBehaviour
         camForward.transform.localRotation = Quaternion.Euler(0f, CamXAngle, 0f);
     }
 
-    private void NoPhysicsRotation()
-    {
-        if (Praying)
-            Dir = Vector3.Normalize(forward);
-
-        if (Dir.magnitude > 0.1f)
-        {
-            float targetAngle = Mathf.Atan2(Dir.z, Dir.x) * Mathf.Rad2Deg;
-
-            Quaternion targetQuaternion = Quaternion.Euler(pelvis.transform.rotation.eulerAngles.x, -targetAngle + 90f, pelvis.transform.rotation.eulerAngles.z);
-
-            pelvis.transform.rotation = Quaternion.RotateTowards(pelvis.transform.rotation, targetQuaternion, rotationSpeed * Time.deltaTime);
-        }
-    }
-
     public void PlayOverrideAction(string name)
     {
         foreach (var action in overrideActions)
@@ -372,6 +398,23 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.09f);
 
         lr.enabled = false;
+    }
+
+    protected void GravityManagement()
+    {
+        isGrounded = Physics.CheckSphere(transform.position, groundDistance, whatIsGround);
+
+        if (isGrounded && gravityVel.y < 0)
+        {
+            gravityVel = new Vector3(0, -10f, 0);
+        }
+
+        gravityVel.y += gravity * Time.deltaTime;
+
+
+        characterController.Move(gravityVel * Time.deltaTime);
+        //transform.position += gravityVel * Time.deltaTime;
+        
     }
 
     private void InitializeMoveDir()

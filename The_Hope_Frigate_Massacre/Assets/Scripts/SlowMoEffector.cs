@@ -85,12 +85,12 @@ public class SlowMoEffector  : MonoBehaviour
     public void StartSlowMotion()
     {
         Time.timeScale = slowMotionTimescale;
-        Time.fixedDeltaTime = startFixedDeltaTime * slowMotionTimescale;
+        //Time.fixedDeltaTime = startFixedDeltaTime * slowMotionTimescale;
     }
 
     public void StopSlowMotion()
     {
         Time.timeScale = startTimescale;
-        Time.fixedDeltaTime = startFixedDeltaTime;
+        //Time.fixedDeltaTime = startFixedDeltaTime;
     }
 }
