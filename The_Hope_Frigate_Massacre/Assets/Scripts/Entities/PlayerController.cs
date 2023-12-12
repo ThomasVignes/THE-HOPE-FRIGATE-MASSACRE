@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Animations.Rigging;
 using UnityEngine.Windows;
 using Whumpus;
 
@@ -48,6 +49,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform camForward, camRight;
     [SerializeField] private GameObject aimCursor, gunTip;
     [SerializeField] private CinemachineVirtualCamera vcam;
+    [SerializeField] private Rig rig;
 
     private LineRenderer lr;
     private GunfireController gunfire;
@@ -241,10 +243,15 @@ public class PlayerController : MonoBehaviour
             
         }
 
-        animator.SetBool("Aim", UnityEngine.Input.GetMouseButton(1));
+        animator.SetBool("Aim", aiming);
 
-        if (aimCursor.activeSelf != UnityEngine.Input.GetMouseButton(1))
-            aimCursor.SetActive(UnityEngine.Input.GetMouseButton(1));
+        if (aiming)
+            rig.weight = 1f;
+        else 
+            rig.weight = 0f;
+
+        if (aimCursor.activeSelf != aiming)
+            aimCursor.SetActive(aiming);
 
         if (Dir.magnitude < 0.3f)
         {
