@@ -133,7 +133,7 @@ public class PlayerController : MonoBehaviour
 
         Vector3 move = Dir * speed * Time.deltaTime;
 
-        if (!Praying && !aiming)
+        if (!Praying && !aiming && Dir.magnitude > 0)
             characterController.Move(Dir * moveSpeed * multiplier * Time.deltaTime);
 
         if (move.magnitude > 0)
@@ -410,10 +410,7 @@ public class PlayerController : MonoBehaviour
         }
 
         gravityVel.y += gravity * Time.deltaTime;
-
-
         characterController.Move(gravityVel * Time.deltaTime);
-        //transform.position += gravityVel * Time.deltaTime;
         
     }
 
