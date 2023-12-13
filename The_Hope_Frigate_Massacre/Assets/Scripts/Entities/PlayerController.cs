@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Animations.Rigging;
 using UnityEngine.Windows;
 using Whumpus;
 
@@ -48,6 +49,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform camForward, camRight;
     [SerializeField] private GameObject aimCursor, gunTip;
     [SerializeField] private CinemachineVirtualCamera vcam;
+    [SerializeField] private Rig rig;
 
     private LineRenderer lr;
     private GunfireController gunfire;
@@ -133,7 +135,7 @@ public class PlayerController : MonoBehaviour
 
         Vector3 move = Dir * speed * Time.deltaTime;
 
-        if (!Praying && !aiming && Dir.magnitude > 0)
+        if (!Praying && !aiming)
             characterController.Move(Dir * moveSpeed * multiplier * Time.deltaTime);
 
         if (move.magnitude > 0)
@@ -241,10 +243,15 @@ public class PlayerController : MonoBehaviour
             
         }
 
-        animator.SetBool("Aim", UnityEngine.Input.GetMouseButton(1));
+        animator.SetBool("Aim", aiming);
 
-        if (aimCursor.activeSelf != UnityEngine.Input.GetMouseButton(1))
-            aimCursor.SetActive(UnityEngine.Input.GetMouseButton(1));
+        if (aiming)
+            rig.weight = 1f;
+        else 
+            rig.weight = 0f;
+
+        if (aimCursor.activeSelf != aiming)
+            aimCursor.SetActive(aiming);
 
         if (Dir.magnitude < 0.3f)
         {
@@ -410,7 +417,10 @@ public class PlayerController : MonoBehaviour
         }
 
         gravityVel.y += gravity * Time.deltaTime;
+
+
         characterController.Move(gravityVel * Time.deltaTime);
+        //transform.position += gravityVel * Time.deltaTime;
         
     }
 
