@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Camera Values")]
     [SerializeField] private float MouseSensitivity;
+    [SerializeField] private float AimMouseSensitivity;
     [SerializeField] float CamXAngle;
     [SerializeField] float CamYAngle;
     [SerializeField] private float camLerp;
@@ -151,8 +152,13 @@ public class PlayerController : MonoBehaviour
         ZInput = UnityEngine.Input.GetAxis("Vertical");
         XInput = UnityEngine.Input.GetAxis("Horizontal");
 
-        MouseX = UnityEngine.Input.GetAxis("Mouse X") * MouseSensitivity;
-        MouseY = UnityEngine.Input.GetAxis("Mouse Y") * MouseSensitivity;
+        float currentSensitivity = MouseSensitivity;
+
+        if (aiming)
+            currentSensitivity = AimMouseSensitivity;
+
+        MouseX = UnityEngine.Input.GetAxis("Mouse X") * currentSensitivity;
+        MouseY = UnityEngine.Input.GetAxis("Mouse Y") * currentSensitivity;
         
 
         multiplier = walkMultiplier;
@@ -199,6 +205,9 @@ public class PlayerController : MonoBehaviour
                 {
                     Shoot();
                 }
+
+                if (Mathf.Abs(MouseX) + Mathf.Abs(MouseY) > 0f * MouseSensitivity)
+                    playerRagdoll.AddForce(Vector3.zero, true);
             }
             else
             {

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.09124676, g: 0.33287907, b: 0.4313666, a: 1}
+  m_IndirectSpecularColor: {r: 0.091420315, g: 0.3329529, b: 0.43130815, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19677,6 +19677,7 @@ MonoBehaviour:
   gravity: -9.81
   groundDistance: 0.2
   MouseSensitivity: 3
+  AimMouseSensitivity: 1.3
   CamXAngle: 0
   CamYAngle: 0
   camLerp: 0.6
@@ -25674,7 +25675,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh54824
+  m_Name: pb_Mesh42094
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -37149,7 +37150,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh56198
+  m_Name: pb_Mesh43478
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -57515,7 +57516,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6245609916346930133, guid: 4853fd3d946e7214cb635f6144e8d20f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4853fd3d946e7214cb635f6144e8d20f, type: 3}
@@ -87144,7 +87145,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh54570
+  m_Name: pb_Mesh41834
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -90248,7 +90249,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh56978
+  m_Name: pb_Mesh44258
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -91146,14 +91147,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SetTo: 0
-  Weight: 120
-  AdditionalDamping: 1
+  Weight: 10
+  AdditionalDamping: 40
   Mass: 1
   LimitVelocity: 1
   LimitAngularVelocity: 1
   MaxVelocity: 1000
   MaxAngularVelocity: 1000
-  EnableProjection: 0
+  EnableProjection: 1
   BaseLayer:
     serializedVersion: 2
     m_Bits: 8
